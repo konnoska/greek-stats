@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How rich am I, Greek-wise?</title>
+<style>
+  :root {
+    --blue: #2a6f97;
+    --blue-dark: #12395c;
+    --white: #ffffff;
+    --muted: #d7e4ee;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(160deg, #0e2f4d 0%, #16466b 45%, #2a6f97 100%);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+  }
+  .hero { max-width: 640px; }
+  .flag { font-size: 4.5rem; line-height: 1; margin-bottom: 8px; }
+  h1 {
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    margin: 0 0 12px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .sub {
+    color: var(--muted);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin: 0 0 34px;
+  }
+  .cta {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-weight: 800;
+    color: var(--blue-dark);
+    text-decoration: none;
+    border-radius: 999px;
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
+    transition: transform .1s ease, box-shadow .18s ease;
+  }
+  .cta:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.36); }
+  .cta:active { transform: translateY(0) scale(1); }
+  .foot {
+    margin-top: 44px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .foot a { color: var(--white); }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="flag">🇬🇷</div>
+    <h1>How rich are you — Greek-wise?</h1>
+    <p class="sub">See where your household income ranks in Greece (2025).</p>
+    <a class="cta" href="calculator/">How rich am I, Greek-wise? 🇬🇷</a>
+    <p class="foot">
+      Based on official ELSTAT / Eurostat data (EU-SILC 2025).<br>
+      <a href="calculator/">Open the calculator →</a>
+    </p>
+  </div>
+</body>
+</html>

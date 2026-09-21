@@ -1,0 +1,1107 @@
+    National Reference Metadata in ESS Standard for Quality Reports Structure
+                                                 (ESQRS)
+
+Country: Greece
+
+Compiling agency: Hellenic Statistical Authority (ELSTAT)
+
+Domain name: Structure of Earnings Survey 2022
+
+
+     Contents
+     1. Contact
+     2. Statistical presentation
+     3. Statistical processing
+     4. Quality management
+     5. Relevance
+     6. Accuracy and reliability
+     7. Timeliness and punctuality
+     8. Coherence and Comparability
+     9. Accessibility and clarity
+     10. Cost and Burden
+     11. Confidentiality
+     12. Comment
+     Related metadata
+     Annexes
+
+
+
+
+1. Contact                                                                            Top
+1.1 Contact organisation             Hellenic Statistical Authority (ELSTAT)
+                                     Business Statistics Division
+1.2 Contact organisation unit
+                                     Structural Business Statistics Section
+1.3 Contact name                     Andriana Dafni
+1.4 Contact person function          Head of the Section
+1.5 Contact mail address             46, Pireos & Eponiton Str. 18510 - Piraeus
+1.6 Contact email address            a.dafni@statistics.gr
+1.7 Contact phone number             (+30) 213 135 2044
+
+
+
+
+                                                                                  1
+2. Statistical presentation                                                                                         Top
+2.1 Data description
+The Structure of Earnings Survey 2022 (SES 2022) is the sixth of the series of four-yearly surveys carried out by the
+Hellenic Statistical Authority (ELSTAT) under the Council Regulation (EC) No 530/1999, the Commission Regulation (EC)
+No 1916/2000 (amended) and the Commission Regulation (EC) No 1738/2005.
+This quality report is prepared in accordance with the Commission Regulation No 698/2006 of 5 May 2006
+implementing Council Regulation (EC) No. 530/1999 concerning quality evaluation of structural statistics on labour
+costs and earnings.
+The main purpose of the survey at national level is to produce statistics on the structure of earnings of employees.
+More specifically, the collected variables refer to:
+    •    the enterprise (branch of economic activity, geographical region, number of local units, number of employed
+         persons, type of employment contract, form of economic and financial control) and
+    •    the employees (sex, age, occupation, citizenship, status in employment, length of service in the enterprises,
+         educational attainment, earnings during the year of the survey, hourly earnings, contributions, paid hours,
+         etc.)
+From a microeconomic perspective, these statistics are a tool for drawing conclusions on the structure of earnings in
+the branches of economic activity. Moreover, the allocation of earnings may be assessed and interpreted on the basis
+of the characteristics of the persons employed in the different branches of economic activity.
+At European level, the survey aims at compiling harmonized statistics providing comparable quantitative and
+qualitative information for all the EU Member States pertaining to the structure of earnings of employees.
+2.2 Classification system
+Economic activity
+Economic activity is coded in Nace Rev.2.
+More specifically:
+    •    For the years 2002 and 2006 the data were compiled in accordance with Nace Rev.1.1
+    •    In 2010, the survey was conducted in line with Nace Rev.2, at the same time, the data were also coded in
+         accordance with Nace Rev.1.1, in order to ensure comparability with the previous surveys (2002 and 2006).
+    •    In 2014, 2018 and 2022, the survey was conducted in line with Nace Rev.2
+Occupation
+All occupations are covered, excluding Major group 6 “Skilled agricultural, forestry and fishery workers” of ISCO_08.
+More specifically:
+     • For the years 2002 and 2006 the data were compiled in accordance with ISCO_88
+    •    In 2010, the survey was conducted in line with ISCO_08, at the same time, the data were also coded in
+         accordance with ISCO_88, in order to ensure comparability with the previous surveys (2002 and 2006).
+    •    In 2014, 2018 and 2022, the survey was conducted in line with ISCO_08
+Education
+For the years 2002,2006 and 2010, all education levels are covered and the data were compiled in accordance with the
+statistical classification ISCED_97. For the years 2014, 2018 and 2022 all education levels are covered and the data were
+compiled in accordance with the statistical classification ISCED_2011.
+Geographical location
+Regional breakdown is based on the Nomenclature of Territorial Units for Statistics (NUTS, level 1).
+2.3 Coverage - sector
+The 2002 survey covered sections C-K of Nace rev.1.1.
+The 2006 survey covered sections C-K, M, N and O of Nace rev.1.1.
+The 2010 survey covered all the sections B-S (excluding O) of Nace rev.2, at the same time, the data were also coded in
+accordance with Nace rev.1.1, in order to ensure comparability with the previous surveys (2002 and 2006).
+The 2014, 2018 and 2022 surveys covered sections B-S (excluding O) of Nace rev.2.
+
+
+
+                                                                                                              2
+2.4 Statistical concepts and definitions
+The concepts and definitions of the basic variables used for the compilation of data of the structure of earnings survey
+are laid down in Regulation (EC) 1738/2005 amending Regulation (EC) No 1916/2000 and Regulation (EC) 530/1999 of
+the European Parliament and of the Council.
+Regional Unit is a geographical area and it is defined in accordance with the Municipalities under Kallikratis Plan. In
+most cases, it refers to a geographical area which is defined by the boundaries of the Department (Nomos).
+Local unit of the enterprise is every local branch of the enterprise which is operating in a different physical location, it
+may be classified in a different branch of economic activity and it is located in another Regional Unit.
+Economic activity of the local unit is the branch of economic activity in which is classified the local unit and may be
+different from the branch of economic activity of the enterprise.
+Group of enterprises
+An enterprise group is an association of at least two enterprises bound together by legal and/or financial links. A group
+of enterprises consists of the parent enterprise and the affiliated companies.
+Collective pay agreement is any type of agreement signed between the enterprise and the employees or their collective
+body and may be:
+     • A national level agreement
+     • An industry agreement
+     • An agreement for individual industries in individual regions where the enterprise or the local unit are located
+     • An enterprise agreement or an agreement applying only to the workers of a local unit.
+Employed persons, for the purposes of the survey on the structure of earnings, are all the employees of the enterprise,
+i.e., the salaried personnel and the wage earners.
+Employees are the employed persons who work and receive remuneration in the form of wages or salaries and have a
+direct employment contract with the enterprise and are remunerated on the basis of the number of hours worked (full-
+time or part-time) and the duration of the contract (fixed or indefinite).
+The following categories are excluded:
+    • management personnel whose remuneration wholly takes the form of a share in profits,
+    • unpaid family workers
+    • outworkers that are remunerated on the basis of the product or service they deliver, sales representatives
+         who are not included in the payroll, that is they are self-employed
+    • occasional workers (i.e. employed without pre-defined working hours),
+    • interim workers (employed by/through agencies),
+    • persons wholly remunerated by way of fees, or commission,
+    • members of the board of directors of the enterprise,
+    • unpaid owners, directors or managers (paid by way of profit share or by fee),
+    • workers of the observation unit permanently (for more than one year) working in an affiliated company
+         located abroad,
+    • voluntary workers.
+Full-time employees are the members of the personnel whose regular working hours are the same as the collectively
+agreed or customary hours worked in the enterprise, even if their contract is for less than one year.
+Part-time employees are the members of the personnel whose regular working hours are less than the collectively
+agreed or customary hours worked in the enterprise on a daily, weekly or monthly basis.
+Seasonal employees are the members of the personnel that are hired under a special work contract designed to cover
+seasonal needs of the enterprise or the local unit, which are identified in the same time period every year.
+Apprentices are those remunerated employed persons who do not fully participate in the production process and work
+either under an apprentice contract or in the context of a project for which vocational training is most important than
+productivity.
+Occupation, according to the statistical classification of occupation ISCO_08 is the “real” worked mainly performed by
+the employee. The essential information for determining the occupation is usually the employee’s job title and a
+description of the main tasks undertaken in the course of his/her duties.
+Paid hours cover normal and overtime remunerated hours, hours remunerated with a lower rate even if the difference
+is covered by social security contributions, as well as hours not worked during the reference periods but nevertheless
+paid (annual leave, sick leave, official holidays and other hours paid such as for medical examinations).
+
+                                                                                                                 3
+Special earnings are the payment for shift work, night work and work during weekends, given the fact that they are not
+counted as overtime pay.
+Payments in kind are all the goods and services provided to the employees by the enterprise or the local unit, such as
+products of the enterprises provided for free or at a reduced price,( e.g. food, beverages, footwear, clothes) shelter for
+the personnel, leased cars, as well as share of the company and other benefits.
+Total annual bonuses refer to any irregular payments which did not occur during each pay period, such as holiday
+bonuses, Christmas and Easter bonuses (13th and 14th salary), productivity bonuses, occasional commissions, profit-
+shares, etc. Bonuses paid regularly on a monthly basis are excluded.
+2.5 Statistical unit
+The primary statistical unit is the local unit of the enterprise with average annual employment amounting to, at least,
+10 persons and the final statistical unit is the employee. As a register of local units is not available, the primary unit is
+considered the enterprise with average annual employment amounting to, at least, 10 persons, classified in sections B-
+S (excluding O) of Nace Rev.2.
+2.6 Statistical population
+The statistical population is the total of the enterprises employing at least 10 employees and classidied in sections B-S
+(excluding O) of Nace Rev.2.
+2.7 Reference area
+Greece, total.
+2.8 Coverage-Time
+2022
+2.9 Base period
+Not applicable.
+
+
+3. Statistical processing                                                                                              Top
+3.1 Source data
+The Structural Earnings survey covered all local units belonging to enterprises with average annual employment 10
+persons or more in the areas of economic activity defined by sections Β-N plus P, Q, R and S of NACE Rev.2. The
+sampling frame that was used for the selection of the primary sampling units (enterprises) was the updated Business
+Register with reference year 2020.
+In order to trace the local units for data collection, since the survey units are the local units and those were not
+included in the register of the enterprises, we applied a two-stage stratified sampling. At the first stage, a sample
+of nh enterprises out of the Nh enterprises was selected in each stratum h with equal probabilities, and next in each
+selected enterprise a sample of local units was selected.
+The following stratification criteria for the enterprises were applied:
+a. Geographical Region – NUTS 1 (Northern Greece, Central Greece, Attica, Aegean Islands and Crete)
+b. Two-digit NACE Rev.2 code of economic activity within each geographical region
+c. Size class of the enterprise. In each of the major strata, the enterprises were stratified into 10 size classes, according
+to their size, determined by their average annual number of employees in the business register, as follows.
+                                            Size class        Number of employees
+                                                 1                  10-19
+                                                 2                  20-49
+                                                 3                  50-99
+                                                 4                 100-249
+                                                 5                 250-499
+                                                 6                 500-999
+                                                 7                1000-1999
+                                                 8                2000-4999
+                                                 9                5000-9999
+                                                10                 10000+
+
+
+                                                                                                                   4
+Size classes 5 and over (250+ employees) were exhaustively surveyed (census classes).
+The total number of employees of the local unit was not included in any register but this information was collected
+and enumerated by the interviewer for each selected enterprise of the sample. A sample of local units was selected
+from the local units that belong to the enterprises of the sample which were selected at the first stage.
+Subsequently, mhi employees were selected out of the Mhi employees belonging in the local units during the survey
+period (=1,2, …, nhi) with equal probabilities by applying systematic sampling. The sample size of employees in local
+units was based on the proportional allocation of the employees of the enterprise, according to the size of the local
+units.
+The final sample size of legal units was 6,871 out of 46,753 (sampling rate=14.7%) and the final sample size of
+employees was 551,927 out of 2,120,574 (sampling rate=26%).
+3.2 Frequency of data collection
+The survey on the structure of earnings is conducted every four years.
+3.3 Data collection
+For the compilation of SES 2022 multiple administrative and other sources were used, while a small number of data
+were collected directly by enterprises through a specially designed questionnaire (questionnaire form 1 and form 2).
+The questionnaire Form 1 is the questionnaire used for the enterprise and it helps to collect information on the
+enterprise, such as economic activity, number of persons employed, the form of economic and financial control,
+number of local units of the enterprise, main type of employment contract and whether the company belongs to a
+Group of enterprises.
+The questionnaire Form 2 is used to collect information on the employees. More specifically, the collected data
+pertain to sex, age, educational attainment, occupation, position, employment status, the total length of service in
+the enterprise, full or part-time employment. In addition, financial data are collected for October of the year when
+the survey is conducted, such as data on hours paid, overtime pay, on gross earnings, payments related to overtime,
+and payments related to shift work. Furthermore, annual financial data are collected, such as gross earnings,
+payments in kind, and payments related to annual bonuses.
+Both questionnaires were developed on paper and in electronic format as a user-friendly editable pdf.
+The questionnaires are delivered to external survey workers (statistical interviewers) who, once trained, visit the
+enterprises in order to fill in the questionnaire form 1 with the assistance of the enterprise’s staff or they hand the
+questionnaire to be filled in by the accountant of the enterprise. Then, they collect the filled in questionnaires and
+deliver them back to ELSTAT. Before filling in the questionnaire form 2, they have to be supplied with the payroll list
+for October (of the specific reference year), which will be used as sampling frame in order to draw the sample of the
+employees to be surveyed. Then, in cooperation with the staff of the enterprise, they have to fill in the questionnaire
+form 2.
+In cases where the enterprise refuses to cooperate with the statistical interviewers or refuses to respond, or delays
+or in case there are particularities, an employee from the Collection of Business Survey Data Section of ELSTAT pays a
+visit to the enterprise and collects the necessary information himself. In some cases (due to lack of time) the
+questionnaire may be delivered and collected by e-mail.
+The same procedure is followed in the Regional Statistical Offices (RSO) of ELSTAT. The questionnaires are sent by
+post to the RSO and then the completed questionnaires are sent by the RSO back to ELSTAT headquarters by post. In
+some cases (due to lack of time) the questionnaire may be sent and returned by e-mail
+Non-response is addressed through telephone contact with the enterprise, reminders sent by e-mail, or personal visits
+to the enterprise.
+For all the enterprises of the sample and for all of their employees (and not a sample of them), data were used from
+the administrative and other sources. In cases of many erroneous or missing data, the respective enterprises and
+employees were excluded from the final results. Readjusted weighting factors were used for the calculation of the
+final SES results.
+3.4 Data validation
+Global checks and Plausibility checks have been applied on micro data based on Eurostat’s checks listed in document
+“Eurostat’s arrangements for implementing the Council Regulation 530/1999, the Commission Regulations
+1916/2000 and 1738/2005”.
+
+
+
+                                                                                                              5
+The data are validated by means of a series of logical checks to ensure that the data are reasonable and consistent
+with other variables. During data processing, the data are checked in order to identify and duly correct any errors. The
+checks done on administrative data, was the coverage of the source in terms of employers and employees and the
+consistency of its fields to SES variables. The coverage and the consistency were satisfactory. Comparisons at
+aggregate level are made, mostly as regards employment data, with the data of the Labour Force Survey and as regards
+average monthly salaries with National Accounts. Then the data are checked by employment stratum and by 2-digit
+branch of economic activity. In case big differences are observed, all the enterprises belonging to the same stratum
+are investigated. Once identified, the errors are further investigated in cooperation with the enterprise in order to
+confirm that it is an error or it is just about an unusual value.
+3.5 Data compilation
+Please see attached file.
+Annexes:
+Estimation process
+3.6 Adjustment
+Not applicable.
+
+4. Quality management                                                                                                 Top
+4.1 Quality assurance
+Correctness and completeness checks, as well as quality checks, are carried out during the whole process of the
+compilation of the data of the survey: from the data collection stage to the final compilation of the results.
+First of all, well-trained and experienced staff is utilized for all the stages of the compilation of the data, namely for
+data collection - including communication with the enterprise - initial checks, data entry, checks for outliers, and final
+checks concerning the time series characteristics of every enterprise.
+Data are validated either before or after data entry by means of logical checks. During data processing, the data are
+checked in order to identify and correct any errors. When an error is identified, the data are further examined, in
+cooperation with the enterprises, in order to confirm that it is an error or it is just an unusual value. At the same time,
+data are checked for completeness, accuracy, and consistency of the correlating variables.
+The Hellenic Statistical Authority (ELSTAT) aims to ensure and further improve the quality of statistics produced and
+maintain the confidence of users in them. This is achieved through the Quality Policy and Quality Guidelines of ELSTAT,
+which are posted on the website of ELSTAT.
+4.2 Quality management-assessment
+The results of the survey on the structure of earnings are reliable, they are transmitted to Eurostat where they are
+assessed and validated.
+
+5. Relevance                                                                                                          Top
+5.1 Relevance - User Needs
+The survey on the structure of earnings meets national needs and the needs of European users.
+Generally, the survey provides statistical information necessary to improve the competitiveness and performance of
+the business community.
+The main users of the survey on the structure of earnings are:
+    •    International Organizations (Eurostat, OECD, European Central Bank (ECB), International Monetary Fund
+         (IMF), International Labour Organisation (ILO))
+    •    National authorities (Government, Ministries),
+    •    Services and Institutions (Banks, Universities, Research Institutes, etc.)
+    •    Social Partners and Trade Unions
+    •    The media, researchers, students, and the general public
+
+
+
+
+                                                                                                                  6
+Moreover, the enterprises that have the obligation to fill in the questionnaire are at the same time users of these data.
+They request relevant data in order to design their remuneration policy, estimate the costs of contractual agreements,
+and study competitiveness in the branch of economic activity they belong to.
+5.2 Relevance - User Satisfaction
+A proxy of Relevance can be provided with the help of the user satisfaction survey. ΕLSTAT conducts:
+a. User Satisfaction Survey
+The User Satisfaction Survey is conducted by ELSTAT on a daily basis, through a questionnaire that should be filled in
+by users each time they request and are provided with data by ELSTAT. The Statistical Data Dissemination Section and
+the Library of ELSTAT, drawing information from the User Satisfaction Survey compile an annual report presenting
+data on the number of users, the responsiveness level to users’ requests, the kind of the requested data, as well as
+the dissemination mode of the statistical information.
+b. Users’ Conference
+Pursuant to its annual statistical program, ΕLSTAT has been conducting since 2010, on a yearly basis, the Users’
+Conference with the participation of representatives of the public and the private sector, academics, and research
+institutes.
+The Users’ Conferences offer ELSTAT the opportunity to gather comments and proposals made by users of statistics
+regarding the dissemination of statistical information, access to statistical data, and any shortcomings in the produced
+statistics.
+The Users’ Conferences help ELSTAT to derive useful conclusions on the areas of statistical production that need to be
+improved in order to better fulfill the changing needs of users. Such conclusions are incorporated in the annual and
+short-term statistical work programs of ELSTAT.
+More information on a) the results of the User Satisfaction Survey and b) on the Users Conferences are available on
+the portal of ELSTAT.
+Based on users’ Statistical data requests, the most wanted SES data are earnings breakdowns by occupation, gender,
+level of education, working time conditions, the existence of collective pay agreement, economic activity, and different
+combinations between these variables.
+5.3 Completeness
+The 2022 SES satisfies the needs of the main user – European Commission (Eurostat) in terms of:
+      • Coverage: enterprises with 10+ employees in NACE Rev. 2 sections B - S, excluding O.
+      • Completeness: The survey covers all (100%) mandatory variables and optional variables
+  5.3.1 Data completeness - rate
+Not applicable.
+
+6. Accuracy and reliability                                                                                         Top
+6.1 Accuracy - overall
+The errors that have an impact on accuracy of the results are: (a) sampling errors and (b) non-sampling errors.
+(a) Sampling errors are due to the fact that the survey is not conducted on all the enterprises of the target population
+but on a sample of these enterprises. The sample size ensures high accuracy estimation at the level of Greece total.
+(b) Non-sampling errors mostly refer to measurement errors and non-response errors, on account of non-response of
+the sample enterprises. Any measurement errors during data collection are identified by means of quality checks are
+duly corrected. As regards non-response errors, all efforts are made for contacting the enterprises that have not
+responded by phone or by other means of communication, in order to persuade them to cooperate and give the
+required information.
+As a consequence, the overall accuracy of the results of the survey on the structure of earnings is generally considered
+to be high.
+6.2 Sampling error
+The survey on the structure of earnings is a sample survey and therefore sampling errors are observed in the total of
+estimations and in the estimations at the level of sections of economic activities.
+
+
+
+                                                                                                                7
+  6.2.1 Sampling error - indicators
+The relative sampling error in form of coefficient of variations (CV) of the estimates of Average Gross Hourly Earnings
+and Gross earnings in the reference month (October 2022) for the year 2022 were calculated with SPSS with clusters
+being the local units within the enterprise and strata were formed by: NACE Rev.2 at two digit level of the local unit x
+NUTS1 of the local unit x Size class of the local unit. The CV tables are included in the annex.
+6.3 Non-sampling error
+Non-sampling errors are basically of 4 types:
+Coverage errors: errors due to divergences existing between the target population and the sampling frame.
+Measurement errors: errors that occur at the time of data collection. There are a number of sources for these errors
+such as the survey instrument of collection, the information system.
+Processing errors: errors in post-data-collection processes such as data entry, keying, editing and weighting.
+Non-response errors: errors due to an unsuccessful attempt to obtain the desired information from an eligible unit.
+6.3.1 Coverage error
+As the Business Register of ELSTAT on the basis of which the survey was designed, is not fully updated from more
+recent administrative sources, there were problems of over-coverage and under-coverage.
+The over-coverage problems are due to non-active enterprises (closed, in bankruptcy/insolvency, not located) and out
+of scope enterprises (with less than 10 employees). These enterprises were included in the business register, they
+were selected in the sample, but they were not actually existed at the time of the survey.
+These enterprises actually reduced the initial sample size of enterprises and consequently of local units. The decrease
+in the number of sampling units in each stratum inflates the variance of the estimated statistics.
+The under-coverage refers to the situation when newly emerged or units with renewed activity with 10+ or more
+employees were not included in the initial sampling frame.
+As a result, the under-coverage problem underestimates the produced statistics. Corrections and weighting for non-
+coverage is difficult, because under-coverage rates cannot be obtained from the sample itself, but only from external
+sources. The under-coverage was not quantified.
+Moreover, due to miss-classification problems of the register, some sampling units changed design strata after data
+collection. These units were allocated to new strata (employment size class, division of economic activity) maintaining
+their initial probability of selection. This fact changed the initial variation of data, the initial allocation of the sample
+enterprises, thus inflating the variation of estimations. Therefore, the coefficient of variation of the produced statistics
+was higher than the coefficient of variation which had been calculated on the basis of the sample design.
+  6.3.1.1 Over-coverage – rate
+The percentage (%) of enterprises included in the sample but ceased to be active or are in fact out of the scope
+during data collection period is presented in the following table.
+                                         NACE_1dgt       Over-coverage rate (%)
+                                         B                                    0,10
+                                         C                                    0,05
+                                         D                                    0,29
+                                         E                                    0,15
+                                         F                                    0,13
+                                         G                                    0,05
+                                         H                                    0,19
+                                         I                                    0,12
+                                         J                                    0,08
+                                         K                                    0,13
+                                         L                                    0,15
+                                         M                                    0,12
+                                         N                                    0,11
+                                         P                                    0,34
+
+
+                                                                                                                   8
+                                        Q                                  0,05
+                                        R                                  0,18
+                                        S                                  0,09
+                                        Total                              0,11
+  6.3.1.2 Common units - proportion
+Not applicable.
+6.3.2 Measurement error
+The questionnaires are filled in through personal interviews in the enterprise. The method which is used ensures high-
+quality data since the statistical interviewers assist the respondents to fill in the questionnaire and /or they fill in
+themselves the data on employees (questionnaire form 2) and they check very carefully the filled in questionnaires
+before leaving the enterprise.
+The statistical interviewers are normally external survey workers and, if necessary, experienced permanent employees
+of ELSTAT. The interviewers are duly trained during seminars before the conduct of the survey. The purpose of the
+training seminars is to enable the interviewers to
+    a) fully understand the definitions and the variables of the survey,
+    b) correctly fill in the survey questionnaire and
+    c) check the questionnaires for any errors through logical checks.
+The structure and the size of the questionnaire make it friendly to statistical interviewers and respondents. The
+questions are clearly stated using the appropriate language and terminology. Furthermore, the compiled guidelines
+cover analytically all the survey variables.
+The support and supervision of the collection of questionnaires were decentralized in the Regional Statistical Offices
+(RSO) of ELSTAT. The checking for the detection of measurement errors was carried out in the RSO. The RSO were also
+provided by the central office of ELSTAT with written and telephone guidance on how to process data and deal with
+arising problems.
+The main problem for interviewers is that respondents who keep data differently, do not make further efforts to make
+them suitable for statistical requirements, or do not understand or read the explanatory notes.
+After receiving the questionnaires, the statistical office recorded them, and separate valid questionnaires from those
+to be revised. If they are not thoroughly completed and corrected, the questionnaire is returned to the interviewer in
+order to contact the enterprise again, otherwise, it cannot be considered valid.
+There is a debugging procedure that assures not missing data, coherence among individual characteristics (age, length
+of service, level of education, etc), and coherence among economic data (monthly and annual earnings related to the
+hours paid etc).
+If extreme values in data are detected during this phase, a telephone call is made to the respondent for clarifications.
+All the above ensure the fact that the collected questionnaires are complete and correctly filled in, thus eliminating
+any measurement errors.
+6.3.3 Non response error
+In order to improve the response rate of the survey, the enterprises are addressed by sending reminder letters via
+fax of email, by calling the enterprises or by paying a visit to the enterprise, in order to collect the requested data.
+Population weighting adjustment, in the form of poststratification, was applied to reduce bias creted by non-response.
+However nonresponse results in higher standard errors.
+  6.3.3.1 Unit response - rate
+The response rate (%) of enterprises by section is presented in the following table.
+                                             Section            Response rate (%)
+                                                B                     85.4
+                                                C                     90.3
+                                                D                     62.7
+                                                E                     86.9
+                                                F                     66.1
+                                                G                     87.4
+                                                H                     78.9
+                                                I                     62.3
+
+                                                                                                               9
+                                               J                      83.4
+                                               K                      78.6
+                                               L                      69.4
+                                              M                       76.7
+                                              N                       77.9
+                                               P                      47.7
+                                              Q                       70.3
+                                               R                      52.2
+                                               S                      56.0
+                                             Total                    75.6
+
+
+  6.3.3.2 Item non-response rate
+Not applicable.
+  6.3.4 Processing error
+Once the data are gathered in the headquarters of ELSTAT, the following statistical actions take place:
+    •    Codification,
+    •    Data entry
+    •    Data validation (checks of completeness and plausibility checks)
+    •    Logical checks
+    •    Quality checks are carried out on the collected data in order to identify any extreme values. Any outliers and
+         errors are identified and duly corrected.
+    •    Comparison with other sources of statistical information as with the corresponding data of the former
+         relevant survey (reference year 2018) and all possible high differences were investigated.
+    •    After the tabulation, the results obtained were analysed in order to know whether they were coherent with
+         the available short-term statistics on labour and wage costs.
+These activities were carried out by expert, permanent staff of the Section in charge of the survey.
+  6.3.4.1 Imputation - rate
+Not applicable
+6.3.5 Model assumption error
+    •    The monthly questions have as reference October 2022 in the questionnaire because it is a month without
+         seasonal payments and absences.
+    •    The accounting or fiscal year coincides with the calendar.
+6.4 Seasonal adjustment
+Not applicable.
+6.5 Data revision - policy
+The data are not subject to revisions after their publication, since they are final and are not based on estimates.
+Revisions may take place only if there are changes in methodology or the statistical classifications of the branches of
+economic activity or occupations.
+More information on the revision policy implemented by ELSTAT is available on the website of ELSTAT.
+6.6 Data revision - practice
+In case the data of the survey on the structure of earnings are revised, this is announced with a relevant News
+Release.
+6.6.1 Data revision - average size
+Not applicable.
+
+
+
+
+                                                                                                            10
+    7. Timeliness and punctuality                                                                                      Top
+    7.1 Timeliness
+    The final results of the 2022 SES transmitted to Eurostat in June 2024, thus the time lag between the transmission date
+    and the reference period of the data is t+18 months, in the relevant deadline posed in the Regulation.
+      7.1.1 Time lag – first result
+    Not applicable.
+      7.1.2 Time lag – final result
+    Not applicable.
+    7.2 Punctuality
+    All deadlines are met.
+      7.2.1 Punctuality - delivery and publication
+    The Announcement was published as scheduled.
+
+    8. Coherence and Comparability                                                                                     Top
+    8.1 Comparability – geographical
+    The collected survey variables are fully in line with the relevant definitions laid down in Regulation (EC) 530/1999 of
+    the European Parliament and of the Council, thus ensuring comparability of statistics among Member States.
+    8.1.1 Asymmetry for mirror flow statistics - coefficient
+    Not applicable.
+    8.2 Comparability over time
+    There are no significant differences in the definitions used in the surveys conducted in 2002, 2006, 2010, 2014, 2018
+    and 2022 apart from those provided by the relevant Regulations, such as the change in the statistical classifications of
+    economic activities and occupations. The 2002 and 2006 surveys were conducted in accordance with Nace Rev.1.1 and
+    ISCO_88. The 2010, 2014, 2018 and 2022 surveys were conducted with Nace Rev.2. and ISCO_08, yet, in order to ensure
+    comparability with the surveys of 2002 and 2006, the 2010 survey was conducted in accordance with Nace Rev.1.1 and
+    ISCO_88 as well.
+    All the above surveys are in line with European principles.
+    8.2.1 Length of comparable time series
+    Not applicable.
+    8.3 Coherence - cross domain
+•   The data of the survey were compared with the data of the Labour Force Survey in terms of employment and hours
+    worked data.
+•   The comparisons have been made between Gross monthly earnings-SES and Net monthly earnings-LFS for each Nace
+    Rev.2 Section B_S_X_O, with the breakdown Men- Women. The differences observed were above 30% for SES data.
+    Annexes: Comparison between SES and LFS
+    8.4 Coherence - sub annual and annual statistics
+    No comparisons, the survey is conducted only every 4 years.
+    8.5 Coherence - National Accounts
+•   The survey on the structure of earnings covers only the enterprises employing at least 10 persons, while National
+    Accounts cover all the enterprises.
+•   In order to achieve a level of comparability between National Accounts data and the results of the survey on the
+    structure of earnings, and in order to check their coherence, the earnings per employee must be calculated for each
+    one of these two data sources. When compared, the data prove to be coherent in the majority of the branches of
+    economic activity.
+
+
+
+                                                                                                                11
+    The comparisons have been made between the number of employees and earnings per employee for each Nace Rev.2
+    Section B_S_X_O. In most sections as well as the total of Nace rev.2 sections, the value of the number of employees
+    was higher in the National Accounts data. As regards earnings per employee, SES data recorded higher values in most
+    sections.
+•   Annexes: Comparison between SES and National Accounts
+    8.6 Coherence – internal
+    All data are checked for internal coherence by ELSTAT and Eurostat.
+
+    9. Accessibility and clarity                                                                                       Top
+    9.1 Dissemination format - News release
+    An Announcement was published on December 20, 2024.
+    9.2 Dissemination format – Publications
+    There are no publications.
+    9.3 Dissemination format – online database
+    There is no online database for the results of the Structure of Earnings Survey 2022. Data files are produced on ad hoc
+    basis upon users’ requests.
+    9.3.1 Data tables – consultations
+    Not applicable.
+    9.4 Dissemination format - microdata access
+    Microdata, if not confidential, are made available to users after their submitting a request to the:
+    Statistical Data Dissemination Section
+    46, Peiraios and Eponiton Str.,
+    18510 Piraeus
+    Tel: +30 213 135 2022
+    e-mail: data.dissem@statistics.gr
+    For confidential reasons, users can have access to microdata, only under a confidentiality contract and with respect to
+    the valid process.
+    9.5 Dissemination format - other
+    Not applicable.
+    9.6 Documentation on methodology
+    The methodology concerning the compilation of data on Structure of Earnings Survey is laid down in Regulation (EC)
+    No 530/1999 and (EC) 1738/2005 of the European Parliament and of the Council.
+    The survey is a sample survey using the two-stage stratified sampling method. The primary statistical unit is the local
+    unit of the enterprise with average annual employment amounting to at least 10 persons and the final statistical unit is
+    the employee. As a register of local units is not available, the primary unit is considered the enterprise with average
+    annual employment amounting to at least 10 persons and classified in sections B-S (excluding O) of Nace Rev.2.
+    9.7 Quality management - documentation
+    Quality is ensured by ELSTAT by means of logical checks and specialized validation checks by Eurostat.
+    9.7.1 Metadata completeness - rate
+    Not applicable.
+    9.7.2 Metadata - consultations
+    Not applicable.
+
+    10. Cost and Burden                                                                                                Top
+    The questionnaires used for the survey are 100% harmonized with Eurostat’s questionnaire. Two forms of
+    questionnaires are used, namely:
+        • Questionnaire Form 1 and
+
+
+                                                                                                                12
+    • Questionnaire Form 2
+The questionnaire Form 1 is the questionnaire used for the enterprise and it is used to collect information on the
+enterprise, such as economic activity, number of persons employed, the form of economic and financial control,
+number of local units of the enterprise, the main type of employment contract and whether the company belongs to a
+Group of enterprises. The required time needed to fill in the questionnaire Form 1 ranges from 10 to 70 minutes,
+depending on the size of the enterprise/service.
+The questionnaire Form 2 is used to collect information on the employees. More specifically, it is used to collect
+information on:
+     • Individual characteristics of the employee (e.g. sex, age, educational attainment)
+     • Characteristics pertaining to employment (occupation, position, employment status, total length of service in
+        the enterprise, full or part-time employment)
+     • Monthly data (the reference month is October of the year when the survey is conducted) on hours paid broken
+        down to overtime pay, on gross earnings broken down to payments related to overtime and to payments
+        related to shift work
+     • Annual data on gross earnings broken down into payments in kind and payments related to annual bonuses.
+It should be noted that the survey is conducted by using the two-stage stratified sampling method, with primary
+statistical unit the local unit of the enterprise with average annual employment amounting to at least 10 persons and
+final statistical unit the employee. As a register of local units is not available, the primary unit is considered the
+enterprise with average annual employment amounting to, at least, 10 persons and classified in sections B-S (excluding
+O) of Nace Rev.2. Therefore, at a first stage, ELSTAT designs a sample of the enterprises and sets out the number of
+employees that should be surveyed per enterprise (8 – 250 employees).
+At a second stage, during the first visit to the enterprise, a sample of employees is drawn from the payroll list, something
+that is time-consuming and increases the difficulty level of the survey.
+The survey on the structure of earnings is considered by some surveyed enterprises a difficult and time-consuming one.
+Complaints have been expressed mostly in terms of size of the questionnaire Form 2 and the detailed analysis of
+required information, in addition to the fact the necessary data must be collected from the local unit and not from the
+enterprise and finally complaints have been expressed on the size of the sample of employees.
+The required time for filling in the questionnaire form 2 ranges from 40 – 60 minutes per employee. The total time
+needed for filling in the questionnaire form 2 for all the employees of the sample per enterprise depends on the size of
+the enterprises and the information systems of the enterprise.
+The cost of the survey for 2022 amounted approximately to 13,766.34 euros.
+
+11. Confidentiality                                                                                                    Top
+11.1 Confidentiality – policy
+The issues concerning the observance of statistical confidentiality by the Hellenic Statistical Authority (ELSTAT) are
+arranged by articles 7, 8 and 9 of the Law 3832/2010 as in force, by Articles 8, 10 and 11(2) of the Regulation on
+Statistical Obligations of the agencies of the Hellenic Statistical System and by Articles 10 and 15 of the Regulation on
+the Operation and Administration of ELSTAT.
+Moreover, ELSTAT disseminates the statistics in compliance with the statistical principles of the European Statistics
+Code of Practice and in particular with the principle of statistical confidentiality.The confidenciality policy of ELSTAT is
+available from the link.
+11.2 Confidentiality – data treatment
+ELSTAT protects and does not disseminate data it has obtained or it has access to, which enable the direct or indirect
+identification of the statistical units that have provided them by the disclosure of individual information directly
+received for statistical purposes or indirectly supplied from administrative or other sources. ELSTAT takes all
+appropriate preventive measures so as to render impossible the identification of individual statistical units by technical
+or other means that might reasonably be used by a third party. Statistical data that could potentially enable the
+identification of the statistical unit are disseminated by ELSTAT if and only if:
+a) these data have been treated, as it is specifically set out in the Regulation on Statistical Obligations of the agencies
+of the Hellenic Statistical System (ELSS), in such a way that their dissemination does not prejudice statistical
+confidentiality or
+b) the statistical unit has given its consent, without any reservations, for the disclosure of data.
+
+
+
+                                                                                                                13
+The confidential data that are transmitted by ELSS agencies to ELSTAT are used exclusively for statistical purposes and
+the only persons who have the right to have access to these data are the personnel engaged in this task and appointed
+by an act of the President of ELSTAT.
+ELSTAT may grant researchers conducting statistical analyses for scientific purposes access to data that enable the
+indirect identification of the statistical units concerned. The access is granted provided the following conditions are
+satisfied:
+a) an appropriate request together with a detailed research proposal in conformity with current scientific standards
+have been submitted;
+b) the research proposal indicates in sufficient detail the set of data to be accessed, the methods of analyzing them,
+and the time needed for the research;
+c) a contract specifying the conditions for access, the obligations of the researchers, the measures for respecting the
+confidentiality of statistical data and the sanctions in case of breach of these obligations has been signed by the
+individual researcher, by his/her institution, or by the organization commissioning the research, as the case may be,
+and by ELSTAT.
+Issues referring to the observance of statistical confidentiality are examined by the Statistical Confidentiality Committee
+(SCC) operating in ELSTAT. The responsibilities of this Committee are to make recommendations to the President of
+ELSTAT on:
+    •    the level of detail at which statistical data can be disseminated, so as the identification, either directly or
+         indirectly, of the surveyed statistical unit is not possible;
+    •    the anonymization criteria for the microdata provided to users;
+    •    the granting to researchers access to confidential data for scientific purposes.
+
+12. Comment                                                                                                          Top
+No comments.
+
+Related metadata                                                                                                      Top
+
+
+Annexes                                                                                                               Top
+The data of the survey on the structure of earnings are produced at two-digit level of Branches of Economic Activities,
+by earnings and paid hours, by number of employees, sex, age, educational attainment and average annual earnings.
+Estimation process
+All local units surveyed were post-stratified by:
+      - Geographical region (NUTS 1),
+      - Economic activity (2-digit codes) and
+      - Employment size class defined as follows:
+
+                                       Size class           Number of employees
+                                            1                       1-4
+                                            2                       5-9
+                                            3                     10-19
+                                            4                     20-49
+                                            5                     50-99
+                                            6                    100-249
+                                            7                    250-499
+                                            8                    500-999
+                                            9                   1000-1999
+                                           10                   2000-4999
+                                           11                     5000+
+
+
+
+
+                                                                                                               14
+After applying the post-stratification, h represents the stratum formulated after the post-stratification technique.
+The extrapolation factor of local units was based on the inverse of the selection probabilities of the local units that
+belong to the enterprises of the sample, as follows:
+
+
+                                                                       𝑁ℎ
+                                                      𝑤ℎ𝑖 =                 (1)
+                                                                       𝑛ℎ
+Where:
+         Nh = the estimated number of local units in the post stratum h
+         nh = the number of responding local units in the post stratum h
+
+
+The extrapolation factor of each employee j that was surveyed (employed in local unit i in stratum h ), was calculated
+using the formula:
+
+
+                                                                        M hi
+                                                    whij = whi              (2)
+                                                                        mhi
+
+In each stratum h (stratum= Geography Χ Economic Activity Χ Size class), the estimation
+                                                                                                  
+                                                                                                  Y of the characteristic y
+                                                                                                     h
+of the survey was calculated using the formula:
+
+                                                         𝑛ℎ 𝑚ℎ𝑖
+
+                                               𝑌̂ℎ = ∑ ∑ 𝑤ℎ𝑖𝑗 ∙ 𝑦ℎ𝑖𝑗 (3)
+                                                      𝑖=1 𝑗=1
+   where:
+
+          nh: the number of responding local units of the sample in stratum h
+          mhi: the number of employees that were surveyed in local unit i in stratum h
+          whij: the extrapolation factor of the employee j in local unit i in stratum h
+          yhij: the value of the characteristic y for the employee j in local unit i in stratum h
+
+
+
+   In the case that the characteristic y is a qualitative variable (e.g. we are interested in the category “full time
+employees”), then the specific variable takes the following values:
+
+
+          y hij = 1, if the surveyed employee belongs to the category of interest
+
+          y hij = 0, if the surveyed employee does not belong to the category of interest
+
+
+   Estimation of a basic characteristic in country level
+
+The estimation of a characteristic y in country level,   Y   total
+                                                                     (variable y in country level of a two-digit NACE Rev.2
+                                                                                of every stratum that contains the local
+code of economic activity), is calculated by adding up the estimations
+                                                                               Y   h
+units belonging to the specific two-digit NACE Rev.2 code economic activity.
+
+Generally, in order for the estimations of the survey characteristics to be produced at a higher than stratum level, we
+add up the estimations of the (final) strata, that form the level under survey.
+
+
+
+                                                                                                                   15
+Comparison between SES and LFS
+
+ Gross monthly earnings-SES                     Net monthly earnings-LFS
+ NACE_1D       Total    Men        Women         Total       Men          Women
+ B              2.183   2.209           1.968    1.039       1.030           1.131
+ C              1.460   1.558           1.242    1.002       1.030             924
+ D              2.813   2.955           2.501    1.237       1.239           1.226
+ E              1.800   1.776           1.880      899           935           813
+ F              1.403   1.450           1.239      928           935           824
+ G              1.315   1.536           1.115      918           993           843
+ H              1.745   1.805           1.595    1.237       1.266           1.091
+ I              1.086   1.124           1.045      838           867           806
+ J              1.967   2.203           1.638    1.157       1.192           1.112
+ K              2.701   3.028           2.423    1.346       1.535           1.162
+ L              1.760   1.942           1.519    1.294       1.407             921
+ M              1.783   1.931           1.629    1.064       1.134             998
+ N              1.099   1.196           1.002      896           927           849
+ P              1.378   1.430           1.352    1.071       1.197           1.018
+ Q              1.493   1.689           1.412    1.026       1.157             980
+ R              1.085   1.161            977       843           908           790
+ S              1.319   1.395           1.261      906           943           862
+Comparison between SES and National Accounts
+                   2022_Sep24
+                   ΝΑ_Employees                 SES                    NA_per head             SES
+                                            Number of                                 Annual average earnings
+ SECTIONS B TO S         ΕΕΜ                employees                   D.11/EEM          per employee
+        B                       8.589                    4.690               25.912                     27.913
+        C                     334.116                 253.952                18.742                     22.993
+        D                      22.204                  18.842                43.037                     32.728
+        E                      26.568                  13.457                32.833                     20.922
+        F                     119.101                  63.117                11.014                     23.391
+        G                     594.478                 383.931                13.594                     22.796
+        H                     200.059                 101.462                29.115                     21.668
+        I                     579.527                 434.581                 5.836                     12.062
+        J                      96.751                  70.352                26.548                     24.100
+        K                      66.374                  44.876                35.562                     35.755
+        L                      18.856                  12.038                11.396                     20.995
+        M                     159.656                  94.193                17.963                     35.622
+        N                     140.546                 116.965                11.221                     13.218
+        P                     346.707                 235.571                15.778                     16.497
+        Q                     239.192                 189.531                17.892                     19.892
+        R                      66.446                  37.572                 9.955                     11.774
+        S                      96.396                  45.446                16.080                     15.219
+      TOTAL              3.115.566                2.120.574                  15.555                     19.703
+       Β -Ν              2.366.825                1.612.456                  15.422                     20.460
+
+
+                                                                                                        16
+                           Variable: Gross earnings in the reference month
+
+                                                                     Coefficient of
+                           Estimate           Standard Error           Variation
+                        2.986.166.292,3
+                                                   27470400,00                     ,009
+                                      8
+
+
+                    Variable: Average Gross Hourly Earnings in the reference month
+
+
+                Ratio Estimate             Standard Error          Coefficient of Variation
+                           9,513                         0,059                          ,006
+
+
+
+                           Variable: Gross earnings in the reference month
+
+                                                                                                   Coefficient of
+Employment Status           Gender                    Estimate            Standard Error
+                                                                                                     Variation
+                               M                  1.580.714.807,78        19091668,89                  ,012
+    Full-time
+                               F                  1.209.042.410,44        15654176,55                  ,013
+                               M                   81.231.221,22           3436921,58                  ,042
+    Part-time
+                               F                  115.177.852,93           3089766,67                  ,027
+
+
+
+                    Variable: Average Gross Hourly Earnings in the reference month
+
+                                                                                              Coefficient of
+   Employment Status          Gender          Ratio Estimate         Standard Error
+                                                                                                Variation
+                                   M                10,523                0,085                    ,008
+        Full-time
+                                   F                9,007                 0,063                    ,007
+                                   M                6,452                 0,182                    ,028
+        Part-time
+                                   F                6,830                 0,089                    ,013
+
+
+
+
+                           Variable: Gross earnings in the reference month
+
+
+                                                                                  Coefficient of
+            NACE Rev.2                 Estimate          Standard Error
+                                                                                    Variation
+                    B              10.236.013,87         179182,27586                 ,018
+
+                    C            370.729.661,64         2551472,08419                 ,007
+                    D              53.009.868,44         456713,30654                 ,009
+                    E              24.226.042,18         436682,45807                 ,018
+                    F              88.535.565,29        2665721,75024                 ,030
+                    G            505.007.568,67         6259651,26428                 ,012
+                    H            177.089.478,69         3556340,45744                 ,020
+                                 471.891.772,77         15377538,5658                 ,033
+                    I
+                                                              2
+                    J            138.415.588,82         3533465,03782                 ,026
+
+
+
+
+                                                                                                                    17
+                 121.197.129,99      16746866,3307                 ,138
+   K
+                                           2
+   L              21.184.999,85      1382628,61579                 ,065
+   M             167.935.966,73      3586596,71075                 ,021
+   N             128.528.776,38      2221420,18248                 ,017
+   P             324.549.979,94      9636808,21138                 ,030
+   Q             282.911.514,08      6485340,46663                 ,023
+   R              40.779.905,93      1342686,36237                 ,033
+
+   S              59.936.459,11      1700721,11568                 ,028
+
+
+    Variable: Average Gross Hourly Earnings in the reference month
+
+
+                                                               Coefficient of
+NACE Rev.2         Ratio Estimate      Standard Error
+                                                                 Variation
+    B                  13,613              ,240                    ,018
+
+    C                  9,219               ,052                    ,006
+    D                  17,647              ,114                    ,006
+    E                  11,216              ,167                    ,015
+    F                  8,963               ,208                    ,023
+    G                  8,809               ,094                    ,011
+    H                  10,986              ,154                    ,014
+    I                  8,051               ,219                    ,027
+    J                  12,655              ,240                    ,019
+    K                  16,943              ,538                    ,032
+    L                  11,619              ,609                    ,052
+    M                  11,446              ,223                    ,019
+    N                  7,719               ,114                    ,015
+    P                  10,548              ,156                    ,015
+    Q                  8,820               ,117                    ,013
+    R                  8,199               ,206                    ,025
+    S                  8,828               ,151                    ,017
+
+
+
+             Variable: Gross earnings in the reference month
+
+                                                               Coefficient of
+   ISCO               Estimate         Standard Error
+                                                                 Variation
+
+    1             144.782.641,14      7858093,97072                 ,054
+                  821.212.829,76      14024071,9276                 ,017
+    2
+                                            7
+                  301.652.576,09      10777235,5376                 ,036
+    3
+                                            9
+    4             510.413.229,28      9392080,91824                 ,018
+    5             546.230.304,62      8116106,91238                 ,015
+    6              12.242.131,05       662816,14393                 ,054
+    7             172.820.817,67      2790913,39411                 ,016
+    8             198.943.796,19      3251626,44002                 ,016
+    9             277.867.966,58      5281785,74295                 ,019
+
+
+
+                                                                                18
+          Variable: Average Gross Hourly Earnings in the reference month
+
+
+                                                                     Coefficient of
+           ISCO             Ratio Estimate      Standard Error
+                                                                       Variation
+
+               1                21,790              ,822                 ,038
+               2                12,414              ,113                 ,009
+               3                10,424              ,160                 ,015
+               4                9,424               ,092                 ,010
+               5                7,261               ,047                 ,006
+               6                7,724               ,161                 ,021
+               7                9,189               ,066                 ,007
+               8                8,814               ,068                 ,008
+               9                6,978               ,049                 ,007
+
+
+
+                   Variable: Gross earnings in the reference month
+
+
+                                                                           Coefficient of
+    AGE_BAND                  Estimate           Standard Error
+                                                                             Variation
+
+1      under 20            1.819.193,68          290807,75195                   ,160
+2       20-29             249.489.424,22        6593582,95161                   ,026
+3       30-39             605.121.463,35        9997939,34378                   ,017
+4       40-49             955.685.697,74       13422463,18040                   ,014
+5       50-59             908.311.105,22       13278682,55465                   ,015
+6        60+              265.739.408,16        6098749,87278                   ,023
+
+
+
+          Variable: Average Gross Hourly Earnings in the reference month
+
+
+                                                                           Coefficient of
+    AGE_BAND                  Estimate            Standard Error
+                                                                             Variation
+1      under 20                 5,621                  ,232                     ,041
+2       20-29                   6,550                  ,076                     ,012
+3       30-39                   8,254                  ,094                     ,011
+4       40-49                   9,889                  ,074                     ,007
+5       50-59                  10,874                  ,082                     ,008
+6        60+                   12,072                  ,197                     ,016
+
+
+
+                   Variable: Gross earnings in the reference month
+
+                                                                      Coefficient of
+        NUTS1                Estimate           Standard Error
+                                                                        Variation
+          1              580.462.970,09        9330213,21070               ,016
+
+          2              403.986.171,18        6380364,36791               ,016
+          3             1.663.390.869,37      20885991,40104               ,013
+          4              338.326.281,74       13807110,88779               ,041
+
+
+
+                                                                                            19
+   Variable: Average Gross Hourly Earnings in the reference month
+
+                                                               Coefficient of
+   NUTS1             Ratio Estimate     Standard Error
+                                                                 Variation
+     1                   8,693               ,084                  ,010
+     2                   8,595               ,089                  ,010
+     3                  10,155               ,073                  ,007
+     4                   9,312               ,334                  ,036
+
+
+
+             Variable: Gross earnings in the reference month
+
+                                                               Coefficient of
+  ISCED               Estimate         Standard Error
+                                                                 Variation
+ Isced 1          104.409.547,97       3.572.925,56                ,034
+ Isced 2          168.372.152,31       4.187.654,93                ,025
+                  1.005.419.259,6      9.937.520,01                ,010
+ Isced 3
+                         6
+ Isced 4          303.851.802,62       5.764.247,12                ,019
+ Isced 5          264.635.862,18       4.500.705,72                ,017
+ Isced 6          645.401.502,16       12.242.977,05               ,019
+ Isced 7          433.928.701,98       10.838.942,41               ,025
+ Isced 8           60.147.463,49       6.882.915,08                ,114
+
+
+
+   Variable: Average Gross Hourly Earnings in the reference month
+
+                                                           Coefficient of
+   ISCED             Ratio Estimate    Standard Error
+                                                             Variation
+   Isced 1               7,66               0,09                  ,012
+   Isced 2               7,58               0,09                  ,011
+   Isced 3               7,93               0,05                  ,006
+   Isced 4               8,84               0,10                  ,011
+   Isced 5               9,40               0,09                  ,009
+   Isced 6               11,47              0,09                  ,008
+   Isced 7               14,85              0,18                  ,012
+   Isced 8               17,99              0,43                  ,024
+
+
+
+             Variable: Gross earnings in the reference month
+
+
+                                                               Coefficient of
+Size_class           Estimate          Standard Error            Variation
+  10_49           601.467.252,55       18.017.432,94               ,030
+ 50_249           948.667.345,19       14.195.234,21               ,015
+250_499           320.011.301,07       12.076.326,51               ,038
+500_999           309.736.887,96       12.200.618,25               ,039
+
+ 1000+            806.283.505,60       22432073,38                 0,03
+
+
+
+
+                                                                                20
+  Variable: Average Gross Hourly Earnings in the reference month
+
+                                                        Coefficient of
+Size_class       Ratio Estimate     Standard Error
+                                                          Variation
+ E10_49               8,13               0,17               ,021
+E50_249               9,40               0,08               ,008
+E250_499              9,84               0,11               ,012
+E500_999             10,18               0,17               ,016
+ 1000+               10,60               0,13               0,01
+
+
+
+
+                                                                         21
+

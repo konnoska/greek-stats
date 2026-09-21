@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Where do I rank in Greek income? (2025)</title>
+<style>
+  :root {
+    --blue: #2a6f97;
+    --blue-dark: #1e4f6e;
+    --red: #c4453c;
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --text: #1c2b36;
+    --muted: #5b6b76;
+    --line: #e2e8ee;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 64px; }
+  header h1 { font-size: 1.7rem; margin: 0 0 6px; }
+  header p { color: var(--muted); margin: 0 0 4px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .card h2 { margin: 0 0 16px; font-size: 1.1rem; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  label.field { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+  .amount-row { display: flex; gap: 8px; }
+  .amount-row input[type=number] { flex: 1; }
+  input[type=number], select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+  }
+  input[type=number]:focus, select:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
+  .seg { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .seg button {
+    flex: 1; padding: 10px 8px; font-size: 0.9rem; border: none; background: #fff; cursor: pointer;
+    color: var(--muted); border-right: 1px solid var(--line);
+  }
+  .seg button:last-child { border-right: none; }
+  .seg button.active { background: var(--blue); color: #fff; font-weight: 600; }
+  .stepper { display: flex; align-items: center; gap: 10px; }
+  .stepper button {
+    width: 34px; height: 34px; font-size: 1.1rem; border: 1px solid var(--line); border-radius: 8px;
+    background: #fff; cursor: pointer;
+  }
+  .stepper input { width: 54px; text-align: center; }
+  .result {
+    margin-top: 24px; padding: 20px; border-radius: 10px;
+    background: linear-gradient(135deg, #eef5fa, #f6fbfd); border: 1px solid #d7e6f1;
+  }
+  .big {
+    font-size: 3rem; font-weight: 800; color: var(--blue-dark); line-height: 1;
+  }
+  .big .pct { font-size: 1.6rem; font-weight: 700; color: var(--blue); }
+  .result .note { color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
+  .result .breakdown { margin-top: 12px; font-size: 0.9rem; color: var(--text); }
+  .result .breakdown b { color: var(--blue-dark); }
+  .flag { display:inline-block; padding: 2px 8px; border-radius: 20px; font-size: 0.75rem; font-weight:700; }
+  .flag.top { background:#fdecea; color:#a83226; }
+  .flag.bot { background:#fdecea; color:#a83226; }
+  .flag.mid { background:#e7f4e8; color:#1e7a34; }
+  .chart-wrap { margin-top: 8px; }
+  svg text { font-family: inherit; }
+  .foot { color: var(--muted); font-size: 0.82rem; margin-top: 20px; }
+  .foot a { color: var(--blue); }
+  .foot li { margin-bottom: 4px; }
+  .cta {
+    display: block; width: 100%; margin-top: 22px; padding: 18px 20px;
+    font-size: 1.25rem; font-weight: 800; color: #fff; border: none; border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #2a6f97, #1c5a82);
+    box-shadow: 0 4px 14px rgba(30,79,110,0.30);
+    transition: transform .08s ease, box-shadow .15s ease;
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 7px 18px rgba(30,79,110,0.38); }
+  .cta:active { transform: translateY(0); }
+  .result.pop { animation: pop .5s ease; }
+  @keyframes pop {
+    0% { transform: scale(.97); }
+    40% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="../" style="font-size:0.85rem; color:var(--blue); text-decoration:none;">← Back</a>
+    <h1 style="margin-top:6px">Where do I rank in Greek income? (2025)</h1>
+    <p>Equivalised disposable household income — the income distribution published annually by
+      ELSTAT / Eurostat (EU-SILC), reference year <strong>2025</strong>.</p>
+    <p style="font-size:0.85rem">Your percentile tells you the share of the Greek population that lives on
+      <em>less than</em> your household does.</p>
+  </header>
+
+  <div class="card">
+    <h2>1 · Your household</h2>
+    <div class="grid">
+      <div>
+        <label class="field">Household size</label>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.9rem">Adults (14+)</span>
+            <div class="stepper">
+              <button onclick="step('adults',-1)" aria-label="fewer adults">−</button>
+              <input id="adults" type="number" min="1" max="15" value="1" oninput="refresh()" />
+              <button onclick="step('adults',1)" aria-label="more adults">+</button>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.9rem">Children (under 14)</span>
+            <div class="stepper">
+              <button onclick="step('children',-1)" aria-label="fewer children">−</button>
+              <input id="children" type="number" min="0" max="15" value="0" oninput="refresh()" />
+              <button onclick="step('children',1)" aria-label="more children">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label class="field">Total net (disposable) household income</label>
+        <div class="amount-row">
+          <input id="amount" type="number" min="0" step="100" placeholder="e.g. 2000" oninput="refresh()" />
+          <div class="seg" style="flex:1">
+            <button id="perMonth" class="active" onclick="setPeriod('month',this)">per month</button>
+            <button id="perYear" onclick="setPeriod('year',this)">per year</button>
+          </div>
+        </div>
+        <p style="font-size:0.78rem; color:var(--muted); margin:8px 0 0;">
+          Net income = after taxes &amp; social contributions. Add up everyone in the household
+          (salaries, pensions, benefits…). If you live alone, enter your own net salary.
+        </p>
+      </div>
+    </div>
+    <button class="cta" id="cta" onclick="reveal()">Show my result 💶</button>
+  </div>
+
+  <div class="card">
+    <h2>2 · Your result</h2>
+    <div class="result" id="result">
+      <div class="big">—</div>
+      <div class="note" id="resultNote">Enter your income, then hit “Show my result” 👇</div>
+      <div class="breakdown" id="breakdown"></div>
+    </div>
+    <div class="chart-wrap">
+      <svg id="chart" viewBox="0 0 800 260" role="img" aria-label="Income distribution curve"></svg>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>How this is calculated</strong>
+    <ul>
+      <li><b>Equivalised income</b> = household net income ÷ (1 + 0.5 × extra adults + 0.3 × children).
+        This adjusts for household size (modified-OECD scale).</li>
+      <li>Your percentile is read from the official <b>2025</b> equivalised-income distribution
+        (Eurostat EU-SILC dataset <code>ilc_di01</code>), interpolated between the published
+        quantile points (1st–99th percentile).</li>
+      <li>Median (50th percentile) = <b>€11,700 / year</b>; 90th percentile = €20,796 / year.</li>
+      <li>Values below the 1st or above the 99th percentile are shown as “bottom/top 1%” (the
+        exact quantiles are not published beyond those points).</li>
+      <li>This measures <b>household living standard</b>, not individual gross salary.</li>
+    </ul>
+    <div>Sources: Eurostat <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_di01">ilc_di01</a>
+      and <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_di03">ilc_di03</a> · ELSTAT
+      “Income and Living Conditions” (SFA10). See <code>docs/SOURCES.md</code> in this repository.</div>
+  </div>
+</div>
+
+<script>
+  // Official 2025 equivalised disposable income quantiles (EUR / year) — Eurostat ilc_di01.
+  // [percentile, income]
+  const Q = [
+    [1, 1700], [2, 2761], [3, 3274], [4, 3780], [5, 4190],
+    [10, 5537], [20, 7110], [30, 8916], [40, 10269], [50, 11700],
+    [60, 13184], [70, 14818], [80, 17056], [90, 20796],
+    [95, 26476], [96, 29280], [97, 32624], [98, 36933], [99, 49279]
+  ];
+  const MEDIAN = 11700;
+  const LOGS = Q.map(([,v]) => Math.log(v));
+  const PERCS = Q.map(([p]) => p);
+
+  let period = 'month'; // 'month' | 'year'
+  let revealed = false;
+
+  function refresh() {
+    if (revealed) compute();
+  }
+
+  function reveal() {
+    const amount = parseFloat(document.getElementById('amount').value) || 0;
+    if (amount <= 0) {
+      document.getElementById('amount').focus();
+      return;
+    }
+    revealed = true;
+    compute();
+    const r = document.getElementById('result');
+    r.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    r.classList.remove('pop');
+    void r.offsetWidth; // restart animation
+    r.classList.add('pop');
+  }
+
+  function percentileOfEquiv(x) {
+    if (x <= 0) return { p: 0, edge: 'bottom' };
+    const lx = Math.log(x);
+    if (lx <= LOGS[0]) return { p: PERCS[0], edge: 'bottom' };
+    if (lx >= LOGS[LOGS.length - 1]) return { p: PERCS[PERCS.length - 1], edge: 'top' };
+    let i = 1;
+    while (LOGS[i] < lx) i++;
+    const t = (lx - LOGS[i - 1]) / (LOGS[i] - LOGS[i - 1]);
+    return { p: PERCS[i - 1] + t * (PERCS[i] - PERCS[i - 1]), edge: null };
+  }
+
+  function equivScale(adults, children) {
+    return 1 + 0.5 * Math.max(0, adults - 1) + 0.3 * Math.max(0, children);
+  }
+
+  function setPeriod(p, btn) {
+    period = p;
+    document.getElementById('perMonth').classList.toggle('active', p === 'month');
+    document.getElementById('perYear').classList.toggle('active', p === 'year');
+    refresh();
+  }
+
+  function step(id, delta) {
+    const el = document.getElementById(id);
+    el.value = Math.max(parseInt(el.min), Math.min(parseInt(el.max), (parseInt(el.value) || 0) + delta));
+    refresh();
+  }
+
+  function fmt(n) {
+    return '€' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function ordinalSuffix(n) {
+    const rem100 = n % 100;
+    if (rem100 >= 11 && rem100 <= 13) return 'th';
+    const rem10 = n % 10;
+    if (rem10 === 1) return 'st';
+    if (rem10 === 2) return 'nd';
+    if (rem10 === 3) return 'rd';
+    return 'th';
+  }
+
+  function compute() {
+    const amount = parseFloat(document.getElementById('amount').value) || 0;
+    const adults = parseInt(document.getElementById('adults').value) || 1;
+    const children = parseInt(document.getElementById('children').value) || 0;
+
+    const netAnnual = period === 'month' ? amount * 12 : amount;
+    const scale = equivScale(adults, children);
+    const equiv = netAnnual / scale;
+
+    const { p, edge } = percentileOfEquiv(equiv);
+
+    const big = document.querySelector('#result .big');
+    const note = document.getElementById('resultNote');
+    const bd = document.getElementById('breakdown');
+
+    if (amount <= 0) {
+      big.innerHTML = '—';
+      note.textContent = 'Enter your household income above.';
+      bd.innerHTML = '';
+      drawChart(null);
+      return;
+    }
+
+    const rounded = Math.min(99.9, Math.max(0.1, p));
+    const n = Math.round(rounded);
+    big.innerHTML = n + '<span class="pct">' + ordinalSuffix(n) + '</span>';
+
+    if (edge === 'bottom') {
+      note.innerHTML = 'Your household is in the <b>bottom 1%</b> of the Greek income distribution.';
+    } else if (edge === 'top') {
+      note.innerHTML = 'Your household is in the <b>top 1%</b> of the Greek income distribution.';
+    } else if (Math.abs(p - 50) < 0.5) {
+      note.innerHTML = 'Half of Greeks live on less than you — you are <b>right at the median</b> (' + fmt(MEDIAN) + '/year).';
+    } else if (equiv < MEDIAN) {
+      note.innerHTML = 'You live on <b>more than ' + Math.round(p) +
+        '%</b> of Greeks, but <b>below the median</b> (' + fmt(MEDIAN) + '/year).';
+    } else {
+      note.innerHTML = 'You live on <b>more than ' + Math.round(p) +
+        '%</b> of Greeks — <b>above the median</b> (' + fmt(MEDIAN) + '/year).';
+    }
+
+    bd.innerHTML =
+      'Household net income: <b>' + fmt(netAnnual) + '/year</b> · ' +
+      'Size-weight: <b>' + scale.toFixed(1) + '</b> · ' +
+      'Equivalised income: <b>' + fmt(equiv) + '/year</b>';
+
+    drawChart(equiv);
+  }
+
+  function drawChart(marker) {
+    const svg = document.getElementById('chart');
+    const W = 800, H = 260, padL = 46, padR = 14, padT = 16, padB = 34;
+    const xMin = 0, xMax = 55000;
+    const plotW = W - padL - padR, plotH = H - padT - padB;
+
+    const xToSvg = x => padL + (x - xMin) / (xMax - xMin) * plotW;
+
+    // build density by differentiating the CDF
+    const N = 500;
+    const xs = [], ds = [];
+    for (let i = 0; i <= N; i++) {
+      const x = xMin + (xMax - xMin) * (i / N);
+      xs.push(x);
+      ds.push(percentileOfEquiv(x).p);
+    }
+    const dens = [];
+    for (let i = 0; i < N; i++) {
+      dens.push(Math.max(0, (ds[i + 1] - ds[i]) / (xs[i + 1] - xs[i])));
+    }
+    const maxD = Math.max(...dens) || 1;
+    const yToSvg = d => padT + plotH * (1 - d / maxD);
+
+    let path = '';
+    for (let i = 0; i < N; i++) {
+      const cx = xToSvg((xs[i] + xs[i + 1]) / 2);
+      const cy = yToSvg(dens[i]);
+      path += (i === 0 ? 'M' : 'L') + cx.toFixed(1) + ',' + cy.toFixed(1) + ' ';
+    }
+
+    let refs = '';
+    [[5537, '10th'], [MEDIAN, 'median'], [20796, '90th']].forEach(([v, lab]) => {
+      refs += '<line x1="' + xToSvg(v) + '" y1="' + padT + '" x2="' + xToSvg(v) +
+        '" y2="' + (padT + plotH) + '" stroke="#cbd5dc" stroke-width="1" stroke-dasharray="4 3"/>' +
+        '<text x="' + xToSvg(v) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="10" fill="#5b6b76">' +
+        lab + '</text>';
+    });
+
+    let markerSvg = '';
+    if (marker != null && marker > 0 && marker < xMax) {
+      const mx = xToSvg(marker);
+      markerSvg =
+        '<line x1="' + mx + '" y1="' + padT + '" x2="' + mx + '" y2="' + (padT + plotH) +
+        '" stroke="' + '#c4453c' + '" stroke-width="2.5"/>' +
+        '<circle cx="' + mx + '" cy="' + padT + '" r="4" fill="#c4453c"/>' +
+        '<text x="' + mx + '" y="' + (padT - 6) + '" text-anchor="middle" font-size="11" font-weight="700" fill="#c4453c">' +
+        fmt(marker) + '</text>';
+    }
+
+    svg.innerHTML =
+      '<rect x="0" y="0" width="' + W + '" height="' + H + '" fill="#ffffff"/>' +
+      '<path d="' + path + '" fill="rgba(42,111,151,0.18)" stroke="' + '#2a6f97' + '" stroke-width="2" fill-rule="evenodd"/>' +
+      refs + markerSvg +
+      '<line x1="' + padL + '" y1="' + (padT + plotH) + '" x2="' + (W - padR) + '" y2="' + (padT + plotH) + '" stroke="#cbd5dc"/>' +
+      '<text x="' + (W / 2) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="10" fill="#5b6b76">' +
+      'equivalised disposable income (EUR / year)</text>';
+  }
+
+  drawChart(null);
+</script>
+</body>
+</html>

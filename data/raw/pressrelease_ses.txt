@@ -1,0 +1,384 @@
+              HELLENIC REPUBLIC
+              HELLENIC STATISTICAL AUTHORITY
+
+                                                                                    Piraeus, 20-12-2024
+
+
+
+
+                               STRUCTURE OF EARNINGS SURVEY, 2022
+
+The Hellenic Statistical Authority (ELSTAT) announces data on the Structure of Earnings in Greece for the
+year 2022.
+The main purpose of the Structure of Earnings Survey (abbreviated as SES) at national level, is to produce
+statistics on the structure of earnings of employees of enterprises classified in sections B-S (excluding O)
+of statistical classification NACE Rev.2, in total and per individual characteristics.
+From a macroeconomic perspective, these statistics are a source for drawing conclusions on the structure
+of earnings in the sections of economic activity. Moreover, the allocation of earnings may be assessed on
+the basis of the characteristics of employees in the different sections of economic activity (e.g. sex, age,
+education level, occupation, etc.). At European level, the survey aims at compiling harmonized statistics
+providing comparable quantitative and qualitative information for all the EU Member States pertaining to
+the structure of earnings of employees.
+More specifically, the collected data refer to: a) the enterprise (e.g. section of economic activity,
+geographical region, number of employees, etc.) and b) the employees (e.g. sex, age, occupation, earnings
+during the surveyed year, etc.).
+
+
+
+
+Information on methodological issues:                       Information on data provision:
+Business Statistics Division                                Tel. +30 213 1352022, 2310, 2308
+Structural Business Statistics Section                      Email. Data.dissem@statistics.gr
+Head of the Section: Andriana Dafni
+Tel: +30 213 1352044
+E-mail: a.dafni@statistics.gr
+
+
+
+
+                                                                                                          1
+The results of the survey for the year 2022 illustrate that the highest mean gross annual earnings are
+recorded in the section of Financial and Insurance activities with 40,086 euros for men and in the section
+of Professional scientific and technical activities with 32,249 euros for women.
+Professional scientific and technical activities and Financial and Insurance activities sections follow with
+38,867 euros for men and 32,078 euros for women respectively (Table 1, Graph 1).
+
+Table 1: Mean gross annual earnings by sex and economic activity of the employer (enterprise), 2022
+
+                                                                                                Deviation in Mean
+            SECTION OF ECONOMIC ACTIVITY                                                           gross annual
+                                                          Mean gross annual earnings
+                     (Nace rev.2)                                                               earnings of males-
+                                                                                                     females
+
+                                                                                                       (%)
+                                                          Males             Females
+
+                   Mining & Quarrying                         28,153                   25,928          8.6
+
+
+                      Manufacturing                           24,792                   19,007         30.4
+
+
+    Electricity, gas, steam and air conditioning supply       34,535                   28,732         20.2
+
+
+         Water supply, waste management etc                   20,614                   21,949          -6.1
+
+
+                       Construction                           24,096                   20,943         15.1
+
+
+               Wholesale and retail trade                     26,851                   19,108         40.5
+
+
+               Transportation and storage                     22,702                   19,079         19.0
+
+
+            Accommodation and food service                    12,670                   11,395         11.2
+
+
+            Information and communication                     27,112                   19,881         36.4
+
+
+            Financial and insurance activities                40,086                   32,078         25.0
+
+
+                   Real estate activities                     23,771                   17,331         37.2
+
+
+      Professional scientific and technical activities        38,867                   32,249         20.5
+
+
+      Administrative and support service activities           14,573                   11,865         22.8
+
+
+                        Education                             17,572                   15,974         10.0
+
+
+        Human health and social work activities               22,841                   18,675         22.3
+
+
+           Arts, entertainment and recreation                 12,525                   10,699         17.1
+
+
+                 Other service activities                     16,470                   14,274         15.4
+
+
+                    TOTAL/AVERAGE                             21,947                   17,361         26.4
+
+
+
+
+                                                                                                                     2
+Graph 1: Mean gross annual earnings by sex and economic activity, 2022
+
+
+
+                                                                           Men           Women        Wage gap between Men - Women
+
+                                                    Arts, entertainment and recreation                                                12,525       10,699
+
+                                                      Accommodation and food service                                                  12,670       11,395
+
+                                           Administrative and support service activities                                              14,523       11,865
+
+                                                                 Other service activities                                             16,470       14,274
+
+                                                                               Education                                              17,572       15,974
+
+                                                 Water supply, waste management etc                                                   20,614       21,949
+
+                                                  AVERAGE GROSS ANNUAL EARNINGS                                                       21,947       17,361
+
+                                                            Transportation and storage                                                22,702       19,079
+
+                                               Human health and social work activities                                                22,841       18,675
+
+                                                                    Real estate activities                                            23,771       17,331
+
+                                                                            Construction                                              24,096       20,943
+
+                                                                          Manufacturing                                               24,792       19,007
+
+                                                             Wholesale and retail trade                                               26,851       19,108
+
+                                                       Information and communication                                                  27,112       19,881
+
+                                                                    Mining & Quarrying                                                28,153       25,928
+
+                                      Electricity, gas, steam and air conditioning supply                                             34,535       28,732
+
+                                          Professional scientific and technical activities                                            38,867 32,249
+
+                                                       Financial and insurance activities                                             40,086       32,078
+
+                                                                                        50,000   40,000   30,000    20,000   10,000            0            10,000   20,000   30,000   40,000   50,000
+
+
+
+
+                                                                                                                                                                                                         3
+In relation to the level of education, for 2022, the highest mean gross annual earnings for the holders of
+Master/Doctorate degrees are recorded in the Mining and Quarrying section, while the lowest earnings
+are recorded in the Education section.
+For University/Technological Education Institute graduates, the highest earnings are recorded in the
+Professional scientific and technical activities section, while the lowest earnings are recorded in the Arts,
+Entertainment and Recreation section.
+For the Upper Secondary/Post-secondary non-tertiary graduates, the highest earnings are recorded in the
+Electricity, gas, steam and air conditioning supply section, while the lower earnings are recorded in the
+Arts, Entertainment and Recreation section.
+For the Primary/Lower-secondary graduates, the highest earnings are recorded in the Electricity, gas,
+steam and air conditioning supply section, while the lower earnings are recorded in the Arts,
+Entertainment and Recreation section (Table 2).
+
+
+
+
+                                                                                                           4
+Table 2: Mean gross annual earnings by economic activity and educational attainment, 2022
+
+
+ SECTION OF ECONOMIC ACTIVITY
+          (Nace rev.2)
+                                                               Mean gross annual earnings in 2022
+
+
+                                                  Highest successfully completed level of education and training
+                                                                Upper
+                                      Primary/Lower        secondary/Post       University/Technological            Master/
+                                        secondary          secondary non-         Education Institutes             Doctorate
+                                                               tertiary
+
+       Mining & Quarrying                22,511                25,467                    32,302                     59,926
+
+          Manufacturing                  17,806                19,819                    30,110                     44,088
+
+  Electricity, gas, steam and air
+       conditioning supply
+                                         26,103                31,046                    34,484                     40,438
+
+       Water supply, waste
+        management etc
+                                         18,076                19,380                    25,438                     30,012
+
+           Construction                  20,761                21,131                    27,105                     38,714
+
+    Wholesale and retail trade           18,992                19,391                    27,375                     52,084
+
+   Transportation and storage            17,052                18,450                    26,192                     43,202
+
+ Accommodation and food service          11,052                11,520                    15,036                     24,236
+
+ Information and communication           12,279                18,661                    23,316                     35,485
+
+ Financial and insurance activities      18,815                26,970                    33,544                     47,295
+
+       Real estate activities            12,412                16,942                    24,198                     41,986
+
+    Professional scientific and
+       technical activities
+                                         17,890                24,570                    35,412                     56,676
+
+   Administrative and support
+       service activities
+                                         10,482                11,618                    16,728                     29,190
+
+            Education                    10,481                11,467                    16,700                     18,423
+
+  Human health and social work
+          activities
+                                         14,042                15,627                    23,193                     26,128
+
+     Arts, entertainment and
+            recreation
+                                          9,764                10,372                    13,243                     19,782
+
+      Other service activities           10,692                12,568                    17,891                     21,828
+
+         TOTAL/AVERAGE                   14,810                16,397                    22,995                     33,437
+
+
+
+
+                                                                                                                               5
+Regarding the classification of employees by individual occupation, the highest mean gross annual
+earnings of 2022 are recorded in management positions, e.g. chief executives, senior officials,
+administrative managers, followed by all kinds of professionals, e.g. doctors, lawyers, engineers (Table 3,
+Graph 2).
+
+
+Table 3: Mean gross annual earnings by sex and occupation (ISCO_08), 2022
+
+                        Occupation
+                                                                                               Mean gross annual earnings in 2022
+                        (ISCO_08)
+                                                                                                               (in euros)
+                                                                                                 Males                                      Females
+                        Managers                                                                           60,105                                     42,788
+                       Professionals                                                                       29,939                                     22,133
+         Technicians and associate professionals                                                           26,894                                     20,577
+                 Clerical support workers                                                                  22,166                                     19,187
+                Service and sales workers                                                                  14,243                                     12,824
+     Skilled agricultural, forestry and fishery workers                                                    14,452                                     10,010
+             Craft and related trades workers                                                              21,947                                     15,075
+      Plant and machine operators, and assemblers                                                          19,960                                     19,408
+                 Elementary occupations                                                                    14,847                                     11,394
+                           Total                                                                           21,947                                     17,361
+
+
+
+
+Graph 2: Mean gross annual earnings by sex and wage gap between Men-Women, 2022
+
+
+                                                                Men           Women     Wage gap between Men - Women
+
+
+                                                    Service and sales workers                                          14,243       12,824
+
+
+                             Skilled agricultural, forestry and fishery workers                                        14,452       10,01
+
+
+                                                     Elementary occupations                                            14,847       11,394
+
+
+                               Plant and machine operators, and assemblers                                             19,960       19,408
+
+
+                                        AVERAGE GROSS ANNUAL EARNINGS                                                  21,947       17,361
+
+
+                                            Craft and related trades workers                                           21,947       15,075
+
+
+                                                     Clerical support workers                                          22,166       19,187
+
+
+                                     Technicians and associate professionals                                           26,894       20,577
+
+
+                                                                 Professionals                                         29,939       22,133
+
+
+                                                                    Managers                                           60,105       42,788
+
+
+                                                                             80,000   60,000      40,000     20,000             0            20,000    40,000   60,000   80,000
+
+
+
+
+                                                                                                                                                                                  6
+Regarding the employees with a managerial or supervisory position in 2022, men account for 57.3% with
+the age group 36-54 years predominating (Table 4).
+
+
+Table 4: Number of employees with managerial or supervisory position by sex and age class, 2022
+
+
+                                         Managerial or Supervisory position       %
+
+
+                        Males                          50,125                    57.3
+     Gender
+                       Females                         37,300                    42.7
+
+
+                  From 18 to 35 years                  8,944                     10.2
+
+
+    Age class     From 36 to 54 years                  49,765                    56.9
+
+
+                   55 years or over                    28,716                    32.8
+
+
+
+
+                                                                                                   7
+                                     EXPLANATORY NOTES
+
+    Structure of    The Structure of Earnings Survey (SES 2022) is conducted on a four-year basis
+ earnings survey    since 2002 by the Hellenic Statistical Authority (ELSTAT). The main purpose of
+                    the survey, at national level, is to produce statistics on the structure of earnings
+                    of employees. More specifically, the collected variables refer to: the enterprise
+                    branch of economic activity, the employees’ sex, age, occupation, educational
+                    attainment, earnings, etc.
+
+Reference period    Month October of reference year.
+
+
+Legal framework     Council Regulation (EC) No 530/1999, Commission Regulation (EC) No 1916/2000
+                    (amended), Commission Regulation (EC) No 1738/2005 and Commission
+                    Regulation No 698/2006.
+
+   Classification   The following statistical classifications are used:
+         System     For economic activity, the statistical classification Nace Rev.2.
+                    For occupations, the statistical classification ISCO_08.
+                    For level of education the statistical classification ISCED_2011.
+
+       Coverage     The survey covers sections Β-S (excluding O) of NACE Rev.2
+
+      Statistical   The statistical population is the total of the enterprises employing at least 10
+     Population     employees and belonging to sections B-S (excluding O) of NACE REV.2
+
+
+   Methodology      The methodology concerning the compilation of data on Structure of Earnings
+                    Survey is laid down in Regulation (EC) No 530/1999 and (EC) 1738/2005 of the
+                    European Parliament and of the Council. The survey is a sample survey using the
+                    two -stage stratified sampling method. The primary statistical unit is the local unit
+                    of the enterprise with average annual employment amounting to, at least, 10
+                    persons while the final statistical unit is the employee. As an approximation, the
+                    primary unit is considered the enterprise with average annual employment
+                    amounting to, at least, 10 persons and belonging to sections B-S (excluding O) of
+                    Nace Rev.2.
+                    Data from a combination of administrative sources were used for the first time
+                    in SES 2022.
+
+
+
+
+                                                                                                       8
+
