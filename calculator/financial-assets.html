@@ -231,8 +231,8 @@
       note.innerHTML = 'You have <b>more financial assets than ~90% of Greek households</b> — you\'re in the <b>top 10%</b>. 📈' +
         '<br><br>That\'s as precise as it gets: the official data <b>stops at P90 (€31,900)</b>.' +
         ' Above this is <b>uncharted territory</b> — the ECB doesn\'t publish P95/P99 because the very top' +
-        ' is so thin and skewed (a handful of very wealthy households) that those numbers would be' +
-        ' statistically unreliable and could risk identifying individuals.';
+        ' is <b>extremely skewed</b> (a handful of very wealthy households hold most of it), so those' +
+        ' numbers would be statistically unreliable and could risk identifying individuals.';
     } else if (Math.abs(p - 50) < 1) {
       note.innerHTML = 'You have <b>about the median</b> stash — right around ' + fmt(MEDIAN) + '.';
     } else {
