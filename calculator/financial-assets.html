@@ -70,6 +70,7 @@
   .result .note { color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
   .chart-wrap { margin-top: 8px; }
   svg text { font-family: inherit; }
+  #chart { touch-action: none; cursor: ew-resize; }
   .inout { font-size: 0.92rem; }
   .inout ul { margin: 6px 0 0; padding-left: 18px; }
   .inout li { margin-bottom: 3px; }
@@ -165,6 +166,12 @@
 
   let revealed = false;
 
+  // Chart geometry & coordinate helpers
+  const CHART = { W: 800, H: 260, padL: 46, padR: 14, padT: 16, padB: 34, xMin: 0, xMax: 50000 };
+  const xToSvg = x => CHART.padL + (x - CHART.xMin) / (CHART.xMax - CHART.xMin) * (CHART.W - CHART.padL - CHART.padR);
+  const svgToValue = sx => CHART.xMin + (sx - CHART.padL) / (CHART.W - CHART.padL - CHART.padR) * (CHART.xMax - CHART.xMin);
+  let dragging = false;
+
   function refresh() { if (revealed) compute(); }
 
   function reveal() {
@@ -207,23 +214,21 @@
     return { p: PERCS[i - 1] + t * (PERCS[i] - PERCS[i - 1]), edge: null };
   }
 
-  function compute() {
-    const amount = parseFloat(document.getElementById('amount').value);
+  function showResult(value) {
     const big = document.querySelector('#result .big');
     const note = document.getElementById('resultNote');
 
-    if (isNaN(amount)) {
+    if (value == null || isNaN(value)) {
       big.innerHTML = '—';
       note.textContent = 'Enter your financial assets, then hit “Show my result”.';
-      drawChart(null);
       return;
     }
 
-    const { p, edge } = percentileOfAssets(amount);
+    const { p, edge } = percentileOfAssets(value);
     const n = Math.round(Math.min(90, Math.max(10, p)));
     big.innerHTML = n + '<span class="pct">' + ordinalSuffix(n) + '</span>';
 
-    if (amount === 0) {
+    if (value === 0) {
       note.innerHTML = 'You report <b>no financial assets</b> — you are at the very bottom of the distribution.';
     } else if (edge === 'bottom') {
       note.innerHTML = 'You have <b>less financial assets than ~90% of Greek households</b> — you are in the bottom 10%.';
@@ -239,16 +244,24 @@
       note.innerHTML = 'You have <b>more financial assets than ' + Math.round(p) +
         '%</b> of Greek households.';
     }
+  }
 
+  function compute() {
+    const amount = parseFloat(document.getElementById('amount').value);
+    if (isNaN(amount)) {
+      showResult(NaN);
+      drawChart(null);
+      return;
+    }
+    showResult(amount);
     drawChart(amount);
   }
 
   function drawChart(marker) {
     const svg = document.getElementById('chart');
-    const W = 800, H = 260, padL = 46, padR = 14, padT = 16, padB = 34;
-    const xMin = 0, xMax = 50000;
+    const { W, H, padL, padR, padT, padB, xMin, xMax } = CHART;
     const plotW = W - padL - padR, plotH = H - padT - padB;
-    const xToSvg = x => padL + (x - xMin) / (xMax - xMin) * plotW;
+    const plotBottom = padT + plotH;
 
     const N = 500;
     const xs = [], ds = [];
@@ -274,32 +287,81 @@
     let refs = '';
     [[200, 'P10'], [MEDIAN, 'median'], [31900, 'P90']].forEach(([v, lab]) => {
       refs += '<line x1="' + xToSvg(v) + '" y1="' + padT + '" x2="' + xToSvg(v) +
-        '" y2="' + (padT + plotH) + '" stroke="#cbd5dc" stroke-width="1" stroke-dasharray="4 3"/>' +
+        '" y2="' + plotBottom + '" stroke="#cbd5dc" stroke-width="1" stroke-dasharray="4 3"/>' +
         '<text x="' + xToSvg(v) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="10" fill="#5b6b76">' +
         lab + '</text>';
     });
 
-    let markerSvg = '';
-    if (marker != null && marker > 0 && marker < xMax) {
-      const mx = xToSvg(marker);
-      markerSvg =
-        '<line x1="' + mx + '" y1="' + padT + '" x2="' + mx + '" y2="' + (padT + plotH) +
-        '" stroke="#c4453c" stroke-width="2.5"/>' +
-        '<circle cx="' + mx + '" cy="' + padT + '" r="4" fill="#c4453c"/>' +
-        '<text x="' + mx + '" y="' + (padT - 6) + '" text-anchor="middle" font-size="11" font-weight="700" fill="#c4453c">' +
-        fmt(marker) + '</text>';
-    }
-
     svg.innerHTML =
       '<rect x="0" y="0" width="' + W + '" height="' + H + '" fill="#ffffff"/>' +
       '<path d="' + path + '" fill="rgba(42,111,151,0.18)" stroke="#2a6f97" stroke-width="2" fill-rule="evenodd"/>' +
-      refs + markerSvg +
-      '<line x1="' + padL + '" y1="' + (padT + plotH) + '" x2="' + (W - padR) + '" y2="' + (padT + plotH) + '" stroke="#cbd5dc"/>' +
+      refs +
+      '<line id="mLine" x1="0" y1="' + padT + '" x2="0" y2="' + plotBottom + '" stroke="#c4453c" stroke-width="2.5" visibility="hidden"/>' +
+      '<circle id="mDot" cx="0" cy="' + padT + '" r="5" fill="#c4453c" visibility="hidden"/>' +
+      '<text id="mLabel" x="0" y="' + (padT - 6) + '" text-anchor="middle" font-size="12" font-weight="700" fill="#c4453c" stroke="#ffffff" stroke-width="4" paint-order="stroke" visibility="hidden"></text>' +
+      '<line x1="' + padL + '" y1="' + plotBottom + '" x2="' + (W - padR) + '" y2="' + plotBottom + '" stroke="#cbd5dc"/>' +
       '<text x="' + (W / 2) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="10" fill="#5b6b76">' +
       'household financial assets (€)</text>';
+
+    positionMarker(marker);
   }
 
+  function positionMarker(value) {
+    const line = document.getElementById('mLine');
+    const dot = document.getElementById('mDot');
+    const label = document.getElementById('mLabel');
+    const plotTop = CHART.padT, plotBottom = CHART.padT + (CHART.H - CHART.padT - CHART.padB);
+
+    if (value == null || isNaN(value) || value < 0) {
+      line.setAttribute('visibility', 'hidden');
+      dot.setAttribute('visibility', 'hidden');
+      label.setAttribute('visibility', 'hidden');
+      return;
+    }
+
+    const sx = xToSvg(Math.max(CHART.xMin, Math.min(CHART.xMax, value)));
+    const { p } = percentileOfAssets(value);
+    const n = Math.round(Math.min(90, Math.max(10, p)));
+
+    line.setAttribute('visibility', 'visible');
+    line.setAttribute('x1', sx); line.setAttribute('x2', sx);
+    line.setAttribute('y1', plotTop); line.setAttribute('y2', plotBottom);
+
+    dot.setAttribute('visibility', 'visible');
+    dot.setAttribute('cx', sx); dot.setAttribute('cy', plotTop);
+
+    label.setAttribute('visibility', 'visible');
+    label.setAttribute('x', sx);
+    label.setAttribute('y', plotTop - 6);
+    label.textContent = value <= 0 ? '€0 · bottom' : fmt(value) + ' · ' + n + ordinalSuffix(n);
+  }
+
+  function clientToSvgX(clientX) {
+    const rect = document.getElementById('chart').getBoundingClientRect();
+    return (clientX - rect.left) / rect.width * CHART.W;
+  }
+
+  function onDragStart(e) {
+    dragging = true;
+    document.getElementById('chart').setPointerCapture(e.pointerId);
+    onDragMove(e);
+  }
+  function onDragMove(e) {
+    if (!dragging) return;
+    const v = Math.max(0, svgToValue(clientToSvgX(e.clientX)));
+    revealed = true;
+    positionMarker(v);
+    showResult(v);
+    document.getElementById('amount').value = Math.round(v);
+  }
+  function onDragEnd() { dragging = false; }
+
   drawChart(null);
+  const chartEl = document.getElementById('chart');
+  chartEl.addEventListener('pointerdown', onDragStart);
+  chartEl.addEventListener('pointermove', onDragMove);
+  chartEl.addEventListener('pointerup', onDragEnd);
+  chartEl.addEventListener('pointercancel', onDragEnd);
 </script>
 </body>
 </html>

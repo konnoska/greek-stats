@@ -79,6 +79,7 @@
   .flag.mid { background:#e7f4e8; color:#1e7a34; }
   .chart-wrap { margin-top: 8px; }
   svg text { font-family: inherit; }
+  #chart { touch-action: none; cursor: ew-resize; }
   .foot { color: var(--muted); font-size: 0.82rem; margin-top: 20px; }
   .foot a { color: var(--blue); }
   .foot li { margin-bottom: 4px; }
@@ -200,6 +201,12 @@
   let period = 'month'; // 'month' | 'year'
   let revealed = false;
 
+  // Chart geometry & coordinate helpers
+  const CHART = { W: 800, H: 260, padL: 46, padR: 14, padT: 16, padB: 34, xMin: 0, xMax: 55000 };
+  const xToSvg = x => CHART.padL + (x - CHART.xMin) / (CHART.xMax - CHART.xMin) * (CHART.W - CHART.padL - CHART.padR);
+  const svgToValue = sx => CHART.xMin + (sx - CHART.padL) / (CHART.W - CHART.padL - CHART.padR) * (CHART.xMax - CHART.xMin);
+  let dragging = false;
+
   function refresh() {
     if (revealed) compute();
   }
@@ -261,29 +268,19 @@
     return 'th';
   }
 
-  function compute() {
-    const amount = parseFloat(document.getElementById('amount').value) || 0;
-    const adults = parseInt(document.getElementById('adults').value) || 1;
-    const children = parseInt(document.getElementById('children').value) || 0;
-
-    const netAnnual = period === 'month' ? amount * 12 : amount;
-    const scale = equivScale(adults, children);
-    const equiv = netAnnual / scale;
-
-    const { p, edge } = percentileOfEquiv(equiv);
-
+  function display(equiv, breakdownHTML) {
     const big = document.querySelector('#result .big');
     const note = document.getElementById('resultNote');
     const bd = document.getElementById('breakdown');
 
-    if (amount <= 0) {
+    if (equiv == null || isNaN(equiv) || equiv <= 0) {
       big.innerHTML = '—';
       note.textContent = 'Enter your household income above.';
       bd.innerHTML = '';
-      drawChart(null);
       return;
     }
 
+    const { p, edge } = percentileOfEquiv(equiv);
     const rounded = Math.min(99.9, Math.max(0.1, p));
     const n = Math.round(rounded);
     big.innerHTML = n + '<span class="pct">' + ordinalSuffix(n) + '</span>';
@@ -302,23 +299,36 @@
         '%</b> of Greeks — <b>above the median</b> (' + fmt(MEDIAN) + '/year).';
     }
 
-    bd.innerHTML =
+    if (breakdownHTML != null) bd.innerHTML = breakdownHTML;
+  }
+
+  function compute() {
+    const amount = parseFloat(document.getElementById('amount').value) || 0;
+    if (amount <= 0) {
+      display(null);
+      drawChart(null);
+      return;
+    }
+    const adults = parseInt(document.getElementById('adults').value) || 1;
+    const children = parseInt(document.getElementById('children').value) || 0;
+
+    const netAnnual = period === 'month' ? amount * 12 : amount;
+    const scale = equivScale(adults, children);
+    const equiv = netAnnual / scale;
+
+    display(equiv,
       'Household net income: <b>' + fmt(netAnnual) + '/year</b> · ' +
       'Size-weight: <b>' + scale.toFixed(1) + '</b> · ' +
-      'Equivalised income: <b>' + fmt(equiv) + '/year</b>';
-
+      'Equivalised income: <b>' + fmt(equiv) + '/year</b>');
     drawChart(equiv);
   }
 
   function drawChart(marker) {
     const svg = document.getElementById('chart');
-    const W = 800, H = 260, padL = 46, padR = 14, padT = 16, padB = 34;
-    const xMin = 0, xMax = 55000;
+    const { W, H, padL, padR, padT, padB, xMin, xMax } = CHART;
     const plotW = W - padL - padR, plotH = H - padT - padB;
+    const plotBottom = padT + plotH;
 
-    const xToSvg = x => padL + (x - xMin) / (xMax - xMin) * plotW;
-
-    // build density by differentiating the CDF
     const N = 500;
     const xs = [], ds = [];
     for (let i = 0; i <= N; i++) {
@@ -343,32 +353,80 @@
     let refs = '';
     [[5537, '10th'], [MEDIAN, 'median'], [20796, '90th']].forEach(([v, lab]) => {
       refs += '<line x1="' + xToSvg(v) + '" y1="' + padT + '" x2="' + xToSvg(v) +
-        '" y2="' + (padT + plotH) + '" stroke="#cbd5dc" stroke-width="1" stroke-dasharray="4 3"/>' +
+        '" y2="' + plotBottom + '" stroke="#cbd5dc" stroke-width="1" stroke-dasharray="4 3"/>' +
         '<text x="' + xToSvg(v) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="10" fill="#5b6b76">' +
         lab + '</text>';
     });
 
-    let markerSvg = '';
-    if (marker != null && marker > 0 && marker < xMax) {
-      const mx = xToSvg(marker);
-      markerSvg =
-        '<line x1="' + mx + '" y1="' + padT + '" x2="' + mx + '" y2="' + (padT + plotH) +
-        '" stroke="' + '#c4453c' + '" stroke-width="2.5"/>' +
-        '<circle cx="' + mx + '" cy="' + padT + '" r="4" fill="#c4453c"/>' +
-        '<text x="' + mx + '" y="' + (padT - 6) + '" text-anchor="middle" font-size="11" font-weight="700" fill="#c4453c">' +
-        fmt(marker) + '</text>';
-    }
-
     svg.innerHTML =
       '<rect x="0" y="0" width="' + W + '" height="' + H + '" fill="#ffffff"/>' +
-      '<path d="' + path + '" fill="rgba(42,111,151,0.18)" stroke="' + '#2a6f97' + '" stroke-width="2" fill-rule="evenodd"/>' +
-      refs + markerSvg +
-      '<line x1="' + padL + '" y1="' + (padT + plotH) + '" x2="' + (W - padR) + '" y2="' + (padT + plotH) + '" stroke="#cbd5dc"/>' +
+      '<path d="' + path + '" fill="rgba(42,111,151,0.18)" stroke="#2a6f97" stroke-width="2" fill-rule="evenodd"/>' +
+      refs +
+      '<line id="mLine" x1="0" y1="' + padT + '" x2="0" y2="' + plotBottom + '" stroke="#c4453c" stroke-width="2.5" visibility="hidden"/>' +
+      '<circle id="mDot" cx="0" cy="' + padT + '" r="5" fill="#c4453c" visibility="hidden"/>' +
+      '<text id="mLabel" x="0" y="' + (padT - 6) + '" text-anchor="middle" font-size="12" font-weight="700" fill="#c4453c" stroke="#ffffff" stroke-width="4" paint-order="stroke" visibility="hidden"></text>' +
+      '<line x1="' + padL + '" y1="' + plotBottom + '" x2="' + (W - padR) + '" y2="' + plotBottom + '" stroke="#cbd5dc"/>' +
       '<text x="' + (W / 2) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="10" fill="#5b6b76">' +
       'equivalised disposable income (EUR / year)</text>';
+
+    positionMarker(marker);
   }
 
+  function positionMarker(value) {
+    const line = document.getElementById('mLine');
+    const dot = document.getElementById('mDot');
+    const label = document.getElementById('mLabel');
+    const plotTop = CHART.padT, plotBottom = CHART.padT + (CHART.H - CHART.padT - CHART.padB);
+
+    if (value == null || isNaN(value) || value < 0) {
+      line.setAttribute('visibility', 'hidden');
+      dot.setAttribute('visibility', 'hidden');
+      label.setAttribute('visibility', 'hidden');
+      return;
+    }
+
+    const sx = xToSvg(Math.max(CHART.xMin, Math.min(CHART.xMax, value)));
+    const { p } = percentileOfEquiv(value);
+    const n = Math.round(Math.min(99.9, Math.max(0.1, p)));
+
+    line.setAttribute('visibility', 'visible');
+    line.setAttribute('x1', sx); line.setAttribute('x2', sx);
+    line.setAttribute('y1', plotTop); line.setAttribute('y2', plotBottom);
+
+    dot.setAttribute('visibility', 'visible');
+    dot.setAttribute('cx', sx); dot.setAttribute('cy', plotTop);
+
+    label.setAttribute('visibility', 'visible');
+    label.setAttribute('x', sx);
+    label.setAttribute('y', plotTop - 6);
+    label.textContent = value <= 0 ? '€0 · bottom' : fmt(value) + '/yr · ' + n + ordinalSuffix(n);
+  }
+
+  function clientToSvgX(clientX) {
+    const rect = document.getElementById('chart').getBoundingClientRect();
+    return (clientX - rect.left) / rect.width * CHART.W;
+  }
+
+  function onDragStart(e) {
+    dragging = true;
+    document.getElementById('chart').setPointerCapture(e.pointerId);
+    onDragMove(e);
+  }
+  function onDragMove(e) {
+    if (!dragging) return;
+    const v = Math.max(0, svgToValue(clientToSvgX(e.clientX)));
+    revealed = true;
+    positionMarker(v);
+    display(v, 'Equivalised income: <b>' + fmt(v) + '/year</b> · drag the chart to explore');
+  }
+  function onDragEnd() { dragging = false; }
+
   drawChart(null);
+  const chartEl = document.getElementById('chart');
+  chartEl.addEventListener('pointerdown', onDragStart);
+  chartEl.addEventListener('pointermove', onDragMove);
+  chartEl.addEventListener('pointerup', onDragEnd);
+  chartEl.addEventListener('pointercancel', onDragEnd);
 </script>
 </body>
 </html>
