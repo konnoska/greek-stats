@@ -192,6 +192,52 @@ Saved in `data/greece_networth_2023_quantiles.csv`.
 
 ---
 
+## 5. Household financial assets (2023) — used by the "stash" calculator
+
+Used by `calculator/financial-assets.html`.
+
+### What it measures
+Household **financial assets** (savings & investments): bank deposits, mutual
+funds, bonds, publicly-traded shares, managed accounts, private pension plans,
+cash-value life insurance, money lent to others, precious metals and other
+financial assets.
+
+It **excludes** "real assets": the main residence (house), other real estate,
+vehicles, valuables, and actively-run self-employment businesses.
+
+### Where it comes from
+- **Publisher:** ECB (HFCS), **national authority:** Bank of Greece
+- **Survey:** HFCS, 2023 wave (5th wave)
+- **Table:** C3 "Total financial assets – distribution"
+- **File:** `HFCS_Statistical_Tables_Wave_2023_June_2026.xlsx`
+
+### Exact source
+https://www.ecb.europa.eu/home/pdf/research/hfcn/HFCS_Statistical_Tables_Wave_2023_June_2026.zip
+
+### Values taken (Greece 2023, household financial assets, EUR)
+
+| Percentile | Financial assets (EUR) |
+|-----------:|-----------------------:|
+| P10        | 200                    |
+| P20        | 500                    |
+| P30        | 1,000                  |
+| P40        | 1,500                  |
+| P50 (median)| 3,000                 |
+| P60        | 5,000                  |
+| P70        | 8,400                  |
+| P80        | 15,000                 |
+| P90        | 31,900                 |
+| Mean       | 14,200                 |
+
+Saved in `data/greece_financial_assets_2023_quantiles.csv`.
+
+> Note: per household (not size-adjusted) and conditional on households holding
+> at least some financial asset (≈99% of households). The distribution **stops
+> at P90** — the ECB does not publish P95/P99 (thin top tail, sampling
+> uncertainty, and confidentiality).
+
+---
+
 ## Quick reference — value → source
 
 | Value used in project | Comes from | File |
@@ -201,6 +247,7 @@ Saved in `data/greece_networth_2023_quantiles.csv`.
 | Mean income €13,381 (reference only) | Eurostat `ilc_di03` (2025) | `README.md` |
 | Salary **median** €15,924 (annual, 2022) | Eurostat `earn_ses_annual` / ELSTAT `SJO47` | `README.md`, `data/raw/table2_earnings_status.xls` |
 | Net worth percentiles (P10–P90) | ECB HFCS 2023 (Bank of Greece) | `data/greece_networth_2023_quantiles.csv` |
+| Financial assets percentiles (P10–P90) | ECB HFCS 2023 (Bank of Greece) | `data/greece_financial_assets_2023_quantiles.csv` |
 
 ---
 

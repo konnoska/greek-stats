@@ -2,23 +2,29 @@
 
 Build a histogram and cumulative-distribution view of Greek income from
 official ELSTAT / Eurostat data, plus an interactive "what's my percentile"
-web page.
+web page (income, and household financial assets).
 
-## Interactive percentile calculator
+## Interactive percentile calculators
 
-Two static pages (no server, no dependencies):
+Static pages (no server, no dependencies):
 
-- **`index.html`** — landing page with a single button ("How rich am I,
-  Greek-wise? 🇬🇷") that opens the calculator.
-- **`calculator/index.html`** — the calculator. A visitor enters their
+- **`index.html`** — landing page with two buttons:
+  - "How rich am I, Greek-wise? 🇬🇷" → `calculator/` (household income)
+  - "How big is my stash, Greek-wise? 💰" → `calculator/financial-assets.html`
+    (household savings & investments)
+- **`calculator/index.html`** — the income calculator. A visitor enters their
   **household's net disposable income** (monthly or yearly) and **household
   size** (adults + children), clicks "Show my result", and sees what percentile
   they fall in for Greek income (2025), with a distribution chart marker.
+- **`calculator/financial-assets.html`** — the savings & investments calculator.
+  A visitor enters their **household's total financial assets** (savings,
+  shares, funds, pensions — *not* the house), and sees their percentile for
+  Greek household financial assets (2023, ECB HFCS).
 
-Because the 2025 distribution measures *equivalised* household income (EU-SILC),
-the calculator asks for household income and size rather than individual gross
-salary. A single person just enters their own net salary and leaves size at
-"1 adult".
+Because the 2025 income distribution measures *equivalised* household income
+(EU-SILC), the income calculator asks for household income and size rather than
+individual gross salary. A single person just enters their own net salary and
+leaves size at "1 adult".
 
 To try it locally:
 
@@ -118,11 +124,14 @@ from a CSV of *individual* incomes (e.g. if microdata is ever obtained).
 ## Repository layout
 
 ```
-index.html                  landing page (button → calculator)
-calculator/index.html       interactive percentile calculator
-scripts/                    Python: income_histogram.py, income_distribution.py
-data/greece_income_2025_quantiles.csv   the 2025 quantile data
-data/raw/                   raw ELSTAT SES 2022 downloads (.xls, .pdf)
-output/                     generated charts (.png)
-docs/SOURCES.md             data provenance (what came from where)
+index.html                      landing page (buttons → calculators)
+calculator/index.html           income percentile calculator
+calculator/financial-assets.html  savings & investments calculator
+scripts/                        Python: income_histogram.py, income_distribution.py
+data/greece_income_2025_quantiles.csv      2025 income quantiles
+data/greece_financial_assets_2023_quantiles.csv  2023 financial-assets quantiles
+data/greece_networth_2023_quantiles.csv    2023 net-worth quantiles (unused)
+data/raw/                       raw ELSTAT SES 2022 downloads (.xls, .pdf)
+output/                         generated charts (.png)
+docs/SOURCES.md                 data provenance (what came from where)
 ```

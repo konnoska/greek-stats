@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How big is my stash? (Greece, 2023)</title>
+<style>
+  :root {
+    --blue: #2a6f97;
+    --blue-dark: #1e4f6e;
+    --red: #c4453c;
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --text: #1c2b36;
+    --muted: #5b6b76;
+    --line: #e2e8ee;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 64px; }
+  header h1 { font-size: 1.7rem; margin: 0 0 6px; }
+  header p { color: var(--muted); margin: 0 0 4px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .card h2 { margin: 0 0 16px; font-size: 1.1rem; }
+  label.field { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+  input[type=number] {
+    width: 100%;
+    padding: 14px 14px;
+    font-size: 1.2rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+  }
+  input[type=number]:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
+  .cta {
+    display: block; width: 100%; margin-top: 18px; padding: 18px 20px;
+    font-size: 1.2rem; font-weight: 800; color: #fff; border: none; border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #2a6f97, #1c5a82);
+    box-shadow: 0 4px 14px rgba(30,79,110,0.30);
+    transition: transform .08s ease, box-shadow .15s ease;
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 7px 18px rgba(30,79,110,0.38); }
+  .cta:active { transform: translateY(0); }
+  .result {
+    margin-top: 20px; padding: 20px; border-radius: 10px;
+    background: linear-gradient(135deg, #eef5fa, #f6fbfd); border: 1px solid #d7e6f1;
+  }
+  .result.pop { animation: pop .5s ease; }
+  @keyframes pop {
+    0% { transform: scale(.97); }
+    40% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+  .big { font-size: 3rem; font-weight: 800; color: var(--blue-dark); line-height: 1; }
+  .big .pct { font-size: 1.6rem; font-weight: 700; color: var(--blue); }
+  .result .note { color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
+  .chart-wrap { margin-top: 8px; }
+  svg text { font-family: inherit; }
+  .inout { font-size: 0.92rem; }
+  .inout ul { margin: 6px 0 0; padding-left: 18px; }
+  .inout li { margin-bottom: 3px; }
+  .in-yes { color: #1e7a34; }
+  .in-no { color: #a83226; }
+  .foot { color: var(--muted); font-size: 0.82rem; margin-top: 20px; }
+  .foot a { color: var(--blue); }
+  .foot li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="../" style="font-size:0.85rem; color:var(--blue); text-decoration:none;">← Back</a>
+    <h1 style="margin-top:6px">How big is my stash? 💰</h1>
+    <p>Household <strong>financial assets</strong> (savings &amp; investments) in Greece — 2023.</p>
+  </header>
+
+  <div class="card">
+    <h2>1 · Your household's financial assets</h2>
+    <label class="field">Total value of savings &amp; investments (€)</label>
+    <input id="amount" type="number" min="0" step="100" placeholder="e.g. 5000" oninput="refresh()" />
+    <p style="font-size:0.78rem; color:var(--muted); margin:8px 0 0;">
+      Add up everyone in the household: bank accounts, mutual funds, shares, bonds,
+      private pension plans, cash-value life insurance, precious metals, money you've lent out.
+      <strong>Do not include your house.</strong>
+    </p>
+    <button class="cta" onclick="reveal()">Show my result 💰</button>
+  </div>
+
+  <div class="card">
+    <h2>2 · Your result</h2>
+    <div class="result" id="result">
+      <div class="big">—</div>
+      <div class="note" id="resultNote">Enter your financial assets, then hit “Show my result” 👇</div>
+    </div>
+    <div class="chart-wrap">
+      <svg id="chart" viewBox="0 0 800 260" role="img" aria-label="Financial assets distribution curve"></svg>
+    </div>
+  </div>
+
+  <div class="card inout">
+    <h2>What counts — and what doesn't</h2>
+    <div class="in-yes"><b>✅ Included</b> (savings &amp; investments):
+      <ul>
+        <li>Bank deposits (current &amp; savings accounts)</li>
+        <li>Mutual funds, bonds, publicly-traded shares</li>
+        <li>Managed investment accounts</li>
+        <li>Private pension plans &amp; whole-life insurance (cash value)</li>
+        <li>Money lent to others (private loans)</li>
+        <li>Precious metals, options/futures, other financial assets</li>
+      </ul>
+    </div>
+    <div class="in-no" style="margin-top:10px;"><b>❌ Not included</b> (these are “real assets”):
+      <ul>
+        <li><b>Your house / main residence</b></li>
+        <li>Other real estate property</li>
+        <li>Cars, vehicles, boats</li>
+        <li>Valuables (jewelry, art, etc.)</li>
+        <li>A business you actively run (self-employment)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>How this is calculated</strong>
+    <ul>
+      <li>Your percentile is read from the official <b>2023</b> household financial-assets
+        distribution (ECB Household Finance &amp; Consumption Survey, run for Greece by the
+        Bank of Greece), interpolated between the published deciles (P10–P90).</li>
+      <li><b>Median = €3,000</b>; 90th percentile = €31,900. (The mean, €14,200, is far above the
+        median — wealth is heavily skewed.)</li>
+      <li>Figures are <b>per household</b> (not adjusted for size) and are conditional on
+        households that hold at least some financial asset (≈99% of households).</li>
+      <li>Below P10 (€200) is shown as “bottom 10%”; above P90 (€31,900) as “top 10%” —
+        the exact percentiles beyond those points aren't published.</li>
+    </ul>
+    <div>Source: ECB <a href="https://www.ecb.europa.eu/home/pdf/research/hfcn/HFCS_Statistical_Tables_Wave_2023_June_2026.zip">HFCS 2023
+      statistical tables</a>, Table C3 · See <code>docs/SOURCES.md</code>.</div>
+  </div>
+</div>
+
+<script>
+  // Official 2023 household financial assets (EUR) — ECB HFCS, Table C3 (conditional on holding).
+  // [percentile, euros]
+  const Q = [
+    [10, 200], [20, 500], [30, 1000], [40, 1500], [50, 3000],
+    [60, 5000], [70, 8400], [80, 15000], [90, 31900]
+  ];
+  const MEDIAN = 3000;
+  const LOGS = Q.map(([,v]) => Math.log(v));
+  const PERCS = Q.map(([p]) => p);
+
+  let revealed = false;
+
+  function refresh() { if (revealed) compute(); }
+
+  function reveal() {
+    const amount = parseFloat(document.getElementById('amount').value);
+    if (isNaN(amount)) {
+      document.getElementById('amount').focus();
+      return;
+    }
+    revealed = true;
+    compute();
+    const r = document.getElementById('result');
+    r.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    r.classList.remove('pop');
+    void r.offsetWidth;
+    r.classList.add('pop');
+  }
+
+  function fmt(n) {
+    return '€' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function ordinalSuffix(n) {
+    const rem100 = n % 100;
+    if (rem100 >= 11 && rem100 <= 13) return 'th';
+    const rem10 = n % 10;
+    if (rem10 === 1) return 'st';
+    if (rem10 === 2) return 'nd';
+    if (rem10 === 3) return 'rd';
+    return 'th';
+  }
+
+  function percentileOfAssets(x) {
+    if (x <= 0) return { p: 0, edge: 'bottom' };
+    const lx = Math.log(x);
+    if (lx <= LOGS[0]) return { p: PERCS[0], edge: 'bottom' };
+    if (lx >= LOGS[LOGS.length - 1]) return { p: PERCS[PERCS.length - 1], edge: 'top' };
+    let i = 1;
+    while (LOGS[i] < lx) i++;
+    const t = (lx - LOGS[i - 1]) / (LOGS[i] - LOGS[i - 1]);
+    return { p: PERCS[i - 1] + t * (PERCS[i] - PERCS[i - 1]), edge: null };
+  }
+
+  function compute() {
+    const amount = parseFloat(document.getElementById('amount').value);
+    const big = document.querySelector('#result .big');
+    const note = document.getElementById('resultNote');
+
+    if (isNaN(amount)) {
+      big.innerHTML = '—';
+      note.textContent = 'Enter your financial assets, then hit “Show my result”.';
+      drawChart(null);
+      return;
+    }
+
+    const { p, edge } = percentileOfAssets(amount);
+    const n = Math.round(Math.min(90, Math.max(10, p)));
+    big.innerHTML = n + '<span class="pct">' + ordinalSuffix(n) + '</span>';
+
+    if (amount === 0) {
+      note.innerHTML = 'You report <b>no financial assets</b> — you are at the very bottom of the distribution.';
+    } else if (edge === 'bottom') {
+      note.innerHTML = 'You have <b>less financial assets than ~90% of Greek households</b> — you are in the bottom 10%.';
+    } else if (edge === 'top') {
+      note.innerHTML = 'You have <b>more financial assets than ~90% of Greek households</b> — you\'re in the <b>top 10%</b>. 📈' +
+        '<br><br>That\'s as precise as it gets: the official data <b>stops at P90 (€31,900)</b>.' +
+        ' Above this is <b>uncharted territory</b> — the ECB doesn\'t publish P95/P99 because the very top' +
+        ' is so thin and skewed (a handful of very wealthy households) that those numbers would be' +
+        ' statistically unreliable and could risk identifying individuals.';
+    } else if (Math.abs(p - 50) < 1) {
+      note.innerHTML = 'You have <b>about the median</b> stash — right around ' + fmt(MEDIAN) + '.';
+    } else {
+      note.innerHTML = 'You have <b>more financial assets than ' + Math.round(p) +
+        '%</b> of Greek households.';
+    }
+
+    drawChart(amount);
+  }
+
+  function drawChart(marker) {
+    const svg = document.getElementById('chart');
+    const W = 800, H = 260, padL = 46, padR = 14, padT = 16, padB = 34;
+    const xMin = 0, xMax = 50000;
+    const plotW = W - padL - padR, plotH = H - padT - padB;
+    const xToSvg = x => padL + (x - xMin) / (xMax - xMin) * plotW;
+
+    const N = 500;
+    const xs = [], ds = [];
+    for (let i = 0; i <= N; i++) {
+      const x = xMin + (xMax - xMin) * (i / N);
+      xs.push(x);
+      ds.push(percentileOfAssets(x).p);
+    }
+    const dens = [];
+    for (let i = 0; i < N; i++) {
+      dens.push(Math.max(0, (ds[i + 1] - ds[i]) / (xs[i + 1] - xs[i])));
+    }
+    const maxD = Math.max(...dens) || 1;
+    const yToSvg = d => padT + plotH * (1 - d / maxD);
+
+    let path = '';
+    for (let i = 0; i < N; i++) {
+      const cx = xToSvg((xs[i] + xs[i + 1]) / 2);
+      const cy = yToSvg(dens[i]);
+      path += (i === 0 ? 'M' : 'L') + cx.toFixed(1) + ',' + cy.toFixed(1) + ' ';
+    }
+
+    let refs = '';
+    [[200, 'P10'], [MEDIAN, 'median'], [31900, 'P90']].forEach(([v, lab]) => {
+      refs += '<line x1="' + xToSvg(v) + '" y1="' + padT + '" x2="' + xToSvg(v) +
+        '" y2="' + (padT + plotH) + '" stroke="#cbd5dc" stroke-width="1" stroke-dasharray="4 3"/>' +
+        '<text x="' + xToSvg(v) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="10" fill="#5b6b76">' +
+        lab + '</text>';
+    });
+
+    let markerSvg = '';
+    if (marker != null && marker > 0 && marker < xMax) {
+      const mx = xToSvg(marker);
+      markerSvg =
+        '<line x1="' + mx + '" y1="' + padT + '" x2="' + mx + '" y2="' + (padT + plotH) +
+        '" stroke="#c4453c" stroke-width="2.5"/>' +
+        '<circle cx="' + mx + '" cy="' + padT + '" r="4" fill="#c4453c"/>' +
+        '<text x="' + mx + '" y="' + (padT - 6) + '" text-anchor="middle" font-size="11" font-weight="700" fill="#c4453c">' +
+        fmt(marker) + '</text>';
+    }
+
+    svg.innerHTML =
+      '<rect x="0" y="0" width="' + W + '" height="' + H + '" fill="#ffffff"/>' +
+      '<path d="' + path + '" fill="rgba(42,111,151,0.18)" stroke="#2a6f97" stroke-width="2" fill-rule="evenodd"/>' +
+      refs + markerSvg +
+      '<line x1="' + padL + '" y1="' + (padT + plotH) + '" x2="' + (W - padR) + '" y2="' + (padT + plotH) + '" stroke="#cbd5dc"/>' +
+      '<text x="' + (W / 2) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="10" fill="#5b6b76">' +
+      'household financial assets (€)</text>';
+  }
+
+  drawChart(null);
+</script>
+</body>
+</html>

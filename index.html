@@ -51,6 +51,9 @@
   }
   .cta:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.36); }
   .cta:active { transform: translateY(0) scale(1); }
+  .buttons { display: flex; flex-direction: column; gap: 18px; align-items: center; }
+  .btn-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .cta-sub { color: var(--muted); font-size: 0.85rem; margin: 0; }
   .foot {
     margin-top: 44px;
     font-size: 0.8rem;
@@ -63,11 +66,19 @@
   <div class="hero">
     <div class="flag">🇬🇷</div>
     <h1>How rich are you — Greek-wise?</h1>
-    <p class="sub">See where your household income ranks in Greece (2025).</p>
-    <a class="cta" href="calculator/">How rich am I, Greek-wise? 🇬🇷</a>
+    <p class="sub">Compare yourself to other Greeks.</p>
+    <div class="buttons">
+      <div class="btn-block">
+        <a class="cta" href="calculator/">How rich am I, Greek-wise? 🇬🇷</a>
+        <p class="cta-sub">Household income · 2025</p>
+      </div>
+      <div class="btn-block">
+        <a class="cta" href="calculator/financial-assets.html">How big is my stash, Greek-wise? 💰</a>
+        <p class="cta-sub">Savings &amp; investments (not your house) · 2023</p>
+      </div>
+    </div>
     <p class="foot">
-      Based on official ELSTAT / Eurostat data (EU-SILC 2025).<br>
-      <a href="calculator/">Open the calculator →</a>
+      Based on official ELSTAT / Eurostat (EU-SILC 2025) and ECB / Bank of Greece (HFCS 2023) data.
     </p>
   </div>
 </body>
