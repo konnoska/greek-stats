@@ -155,6 +155,43 @@ same survey:
 
 ---
 
+## 4. Household net wealth (2023) — held for later use
+
+Not yet used in the calculator, but downloaded and saved for a future
+"net worth" tool.
+
+### Where it comes from
+- **Publisher:** ECB (Eurosystem Household Finance and Consumption Survey)
+- **National authority for Greece:** Bank of Greece
+- **Survey:** HFCS, 2023 wave (5th wave)
+- **Table:** J3 "Net wealth per household – distribution"
+- **File:** `HFCS_Statistical_Tables_Wave_2023_June_2026.xlsx` (published June 2026)
+
+### Exact source
+https://www.ecb.europa.eu/home/pdf/research/hfcn/HFCS_Statistical_Tables_Wave_2023_June_2026.zip
+
+### Values taken (Greece 2023, household net wealth, EUR)
+
+| Percentile | Net wealth (EUR) |
+|-----------:|-----------------:|
+| P10        | 4,300            |
+| P20        | 16,800           |
+| P30        | 49,100           |
+| P40        | 75,800           |
+| P50 (median)| 103,200          |
+| P60        | 138,300          |
+| P70        | 181,600          |
+| P80        | 246,700          |
+| P90        | 376,200          |
+| Mean       | 170,200          |
+
+Saved in `data/greece_networth_2023_quantiles.csv`.
+
+> Note: household-level (not equivalised, not per person); the published
+> distribution stops at P90 (no P95/P99).
+
+---
+
 ## Quick reference — value → source
 
 | Value used in project | Comes from | File |
@@ -163,6 +200,7 @@ same survey:
 | **Median income €11,700** | Eurostat `ilc_di03` & `ilc_di01` (2025, both agree) | `README.md` |
 | Mean income €13,381 (reference only) | Eurostat `ilc_di03` (2025) | `README.md` |
 | Salary **median** €15,924 (annual, 2022) | Eurostat `earn_ses_annual` / ELSTAT `SJO47` | `README.md`, `data/raw/table2_earnings_status.xls` |
+| Net worth percentiles (P10–P90) | ECB HFCS 2023 (Bank of Greece) | `data/greece_networth_2023_quantiles.csv` |
 
 ---
 
