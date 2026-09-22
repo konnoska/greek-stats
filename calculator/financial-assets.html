@@ -70,7 +70,7 @@
   .result .note { color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
   .chart-wrap { margin-top: 8px; }
   svg text { font-family: inherit; }
-  #chart { touch-action: none; cursor: ew-resize; }
+  #chart { touch-action: pan-y; cursor: ew-resize; }
   .inout { font-size: 0.92rem; }
   .inout ul { margin: 6px 0 0; padding-left: 18px; }
   .inout li { margin-bottom: 3px; }
@@ -109,6 +109,7 @@
     </div>
     <div class="chart-wrap">
       <svg id="chart" viewBox="0 0 800 260" role="img" aria-label="Financial assets distribution curve"></svg>
+      <p style="font-size:0.75rem; color:var(--muted); margin:6px 0 0; text-align:center;">↔ drag the line to explore · swipe up/down to scroll</p>
     </div>
   </div>
 
@@ -171,6 +172,7 @@
   const xToSvg = x => CHART.padL + (x - CHART.xMin) / (CHART.xMax - CHART.xMin) * (CHART.W - CHART.padL - CHART.padR);
   const svgToValue = sx => CHART.xMin + (sx - CHART.padL) / (CHART.W - CHART.padL - CHART.padR) * (CHART.xMax - CHART.xMin);
   let dragging = false;
+  let startX = 0, startY = 0;
 
   function refresh() { if (revealed) compute(); }
 
@@ -342,12 +344,21 @@
   }
 
   function onDragStart(e) {
-    dragging = true;
-    document.getElementById('chart').setPointerCapture(e.pointerId);
-    onDragMove(e);
+    startX = e.clientX;
+    startY = e.clientY;
+    dragging = false;
   }
   function onDragMove(e) {
-    if (!dragging) return;
+    if (!dragging) {
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) {
+        dragging = true;
+        document.getElementById('chart').setPointerCapture(e.pointerId);
+      } else {
+        return; // vertical scroll or tap — let the browser handle it
+      }
+    }
     const v = Math.max(0, svgToValue(clientToSvgX(e.clientX)));
     revealed = true;
     positionMarker(v);
